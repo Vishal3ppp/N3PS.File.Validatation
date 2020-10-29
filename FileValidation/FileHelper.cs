@@ -19,9 +19,9 @@ namespace N3PS.File.Validatation.FileValidation
         public void ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Logger logger)
         {
             string[] allLines = System.IO.File.ReadAllLines(fetchedFlatFileObj.FlatFilePath);
-            int totalCount = Convert.ToInt32(fetchedSettingsObj.Percentage * allLines.Length);
+            int totalCount = Convert.ToInt32((fetchedSettingsObj.Percentage / 100) * allLines.Length);
 
-            logger.Info($"Total count = {totalCount}, {fetchedSettingsObj.Percentage} * {allLines.Length}");
+            logger.Info($"Total count = {totalCount}, ({fetchedSettingsObj.Percentage} / 100 )* {allLines.Length}");
 
             
            // SQLiteConnection connection = sqlManipulation.OpenDBConnection(DBName);
@@ -44,7 +44,7 @@ namespace N3PS.File.Validatation.FileValidation
 
                 do
                 {
-                    randomLineNumber = rmd.Next(allLines.Length);
+                    randomLineNumber = rmd.Next(allLines.Length-1);
                     ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber, logger);
 
                 } while (ds.Tables[0].Rows.Count > 0);
@@ -53,13 +53,13 @@ namespace N3PS.File.Validatation.FileValidation
                 //Check Validations
                 if (randomLineContent.Length > fetchedFlatFileObj.RecordSize)
                 {
-                    logger.Error($"Flat file line number {randomLineNumber} exceeded specified Record Size.");
+                    logger.Error($"Flat file line number {randomLineNumber+1} exceeded specified Record Size.");
                 }
 
 
                 if (randomLineContent.Length < fetchedFlatFileObj.RecordSize)
                 {
-                    logger.Error($"Flat file line number {randomLineNumber} less than specified Record Size.");
+                    logger.Error($"Flat file line number {randomLineNumber+1} less than specified Record Size.");
                 }
 
                 foreach (Fields fields in fetchedFlatFileObj.fields)
@@ -75,7 +75,7 @@ namespace N3PS.File.Validatation.FileValidation
                                 {
                                     if (content.Length != validationRule.ValidationSize)
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -83,9 +83,9 @@ namespace N3PS.File.Validatation.FileValidation
 
                             case "mandatorycheck":
                                 {
-                                    if (content != string.Empty)
+                                    if (content == string.Empty)
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -95,7 +95,7 @@ namespace N3PS.File.Validatation.FileValidation
                                 {
                                     if (!validationRule.Values.Contains(content))
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -108,7 +108,7 @@ namespace N3PS.File.Validatation.FileValidation
 
                                     if (!int.TryParse(content, out number))
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -124,7 +124,7 @@ namespace N3PS.File.Validatation.FileValidation
                                     catch (Exception excp)
                                     {
 
-                                        logger.Error($"Flat File Line Number : {randomLineNumber}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
 
 
                                         logger.Error(excp.ToString() + " --- " + excp.StackTrace);

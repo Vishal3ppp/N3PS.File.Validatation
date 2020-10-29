@@ -9,3 +9,11 @@ D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3P
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.csproj.CopyComplete
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.exe
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.pdb
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\EntityFramework.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\EntityFramework.SqlServer.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\System.Data.SQLite.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\System.Data.SQLite.EF6.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\System.Data.SQLite.Linq.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\EntityFramework.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\EntityFramework.SqlServer.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\System.Data.SQLite.xml
