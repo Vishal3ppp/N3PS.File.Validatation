@@ -100,7 +100,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                         }
                         else
                         {
-                            logger.Info("Field Name is not specified so go to next Field.");
+                            logger.Info("Field Name is not specified so end the loop.");
                             break;
                         }
 
@@ -113,7 +113,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                         }
                         else
                         {
-                            logger.Info("Field Column Numbeer is not specified so go to next Field.");
+                            logger.Info("Field Column Numbeer is not specified so end the loop.");
                             break;
                         }
 
@@ -123,12 +123,12 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                         if (startPosNode != null)
                         {
 
-                            field.StartPosition = Convert.ToInt32(startPosNode.InnerText);
+                            field.StartPosition = Convert.ToInt32(startPosNode.InnerText.Trim());
                             logger.Info("Fetched start position element : " + field.StartPosition);
                         }
                         else
                         {
-                            logger.Info("Field Start Position is not specified so go to next Field.");
+                            logger.Info("Field Start Position is not specified so end the loop.");
                             break;
                         }
 
@@ -140,12 +140,12 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                         if (lengthNode != null)
                         {
 
-                            field.Length = Convert.ToInt32(lengthNode.InnerText);
+                            field.Length = Convert.ToInt32(lengthNode.InnerText.Trim());
                             logger.Info("Fetched Length element : " + field.Length);
                         }
                         else
                         {
-                            logger.Info("Field Start Position is not specified so go to next Field.");
+                            logger.Info("Field Start Position is not specified so end the loop.");
                             break;
                         }
 

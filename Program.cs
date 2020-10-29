@@ -32,6 +32,15 @@ namespace N3PS.File.Validatation
             FlatFile fetchedFlatFileObj = flatFile.GetInstance(FlatFileXmlName, logger);
 
 
+            SettingsFile settingsFile = new SettingsFile();
+            SettingsFile fetchedSettingsObj = settingsFile.GetInstance(SettingsXmlName, logger);
+
+
+
+            ValidationRuleFile validationRuleFile = new ValidationRuleFile();
+            ValidationRuleFile fetchedValidationRuleObj = validationRuleFile.GetInstance(ValidationRuleXmlName, logger);
+
+
             HDDCheck check = new HDDCheck();
             bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath, logger);
 

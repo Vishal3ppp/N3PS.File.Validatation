@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\Fields.cs" />
+    <Compile Include="BusinessLogic\ValidationsRule.cs" />
     <Compile Include="DiskManipulation\HDDCheck.cs" />
     <Compile Include="FileValidation\FileHelper.cs" />
     <Compile Include="Program.cs" />
