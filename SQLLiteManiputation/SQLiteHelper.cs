@@ -82,6 +82,34 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
 
 
 
+
+        public bool DeleteTable(string DBName, string tableName, Logger logger)
+        {
+            bool isTableCreated = false;
+            try
+            {
+                SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                m_dbConnection.Open();
+
+
+
+                SQLiteCommand command = new SQLiteCommand($"DROP TABLE {tableName}", m_dbConnection);
+                command.ExecuteNonQuery();
+
+
+
+                m_dbConnection.Close();
+                isTableCreated = true;
+            }
+            catch (Exception excp)
+            {
+                logger.Error("Error while deleting sql lite Table : " + excp.ToString() + " --- " + excp.StackTrace);
+            }
+
+            return isTableCreated;
+        }
+
+
         public bool InsertRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, Logger logger)
         {
             bool isRecordInserted = false;
@@ -146,6 +174,13 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
         {
             SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
             m_dbConnection.Open();
+
+            return m_dbConnection;
+        }
+
+        public SQLiteConnection CloseDBConnection(SQLiteConnection m_dbConnection)
+        {
+            m_dbConnection.Close();
 
             return m_dbConnection;
         }

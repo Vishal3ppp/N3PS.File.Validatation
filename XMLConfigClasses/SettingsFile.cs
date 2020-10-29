@@ -12,7 +12,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
     class SettingsFile
     {
         //public string LogLevel { get; set; }
-
+        public bool NewRun { get; set; }
 
         public decimal Percentage { get; set; }
 
@@ -45,6 +45,20 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                 //    logger.Info("LogLevel element is not exist.");
                 //    settings.LogLevel = string.Empty;
                 //}
+
+
+                logger.Info("Retrieving the NewRun element.");
+                XmlNode newRunNode = xmlDoc.SelectSingleNode("//Settings/LoggerSettings/LogLevel");
+                if (newRunNode != null)
+                {
+                    logger.Info("NewRun element is exist.");
+                    settings.NewRun = Convert.ToBoolean(newRunNode.InnerText.Trim().ToLower());
+                }
+                else
+                {
+                    logger.Info("NewRun element is not exist.");
+                    settings.NewRun = true;
+                }
 
 
                 logger.Info("Retrieving the Percentage element.");

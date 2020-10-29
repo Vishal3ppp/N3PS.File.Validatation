@@ -16,15 +16,15 @@ namespace N3PS.File.Validatation.FileValidation
 {
     class FileHelper
     {
-        public void ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj,string DBName, string tableName, Logger logger)
+        public void ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Logger logger)
         {
             string[] allLines = System.IO.File.ReadAllLines(fetchedFlatFileObj.FlatFilePath);
             int totalCount = Convert.ToInt32(fetchedSettingsObj.Percentage * allLines.Length);
 
             logger.Info($"Total count = {totalCount}, {fetchedSettingsObj.Percentage} * {allLines.Length}");
 
-            SQLiteHelper sqlManipulation = new SQLiteHelper();
-            SQLiteConnection connection = sqlManipulation.OpenDBConnection(DBName);
+            
+           // SQLiteConnection connection = sqlManipulation.OpenDBConnection(DBName);
 
             DateTime startTime = DateTime.Now;
 

@@ -7,6 +7,7 @@ using NLog;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -58,17 +59,29 @@ namespace N3PS.File.Validatation
             {
                 return 0;
             }
+            string DBName = "ICA";
+            SQLiteHelper sqlManipulation = new SQLiteHelper();
+            bool isDBExist = sqlManipulation.IsDBExist(DBName);
+            if (!isDBExist)
+            {
+                sqlManipulation.CreateDB(DBName, logger);
+            }
 
             //SQLiteHelper sqlLite = new SQLiteHelper();
-            string DBName = "ICA";
-            FileHelper helpe = new FileHelper();
-            helpe.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, DBName, tableName, logger);
+            SQLiteConnection m_dbConnection = sqlManipulation.OpenDBConnection(DBName);
+            if (fetchedSettingsObj.NewRun)
+            {
+                 
+                sqlManipulation.DeleteTable(DBName, tableName, logger);
+                sqlManipulation.CreateTable(DBName, CreateTableSQLQuery, logger);
+                //sqlManipulation.CloseDBConnection(m_dbConnection);
 
-            //bool isDBExist = sqlLite.IsDBExist(DBName);
-            //if(!isDBExist)
-            //{
-            //    sqlLite.CreateDB(DBName, logger);
-            //}
+            }
+
+            FileHelper helper = new FileHelper();
+            helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, logger);
+
+            
             
             //sqlLite.CreateTable(DBName, CreateTableSQLQuery, logger);
             //sqlLite.InsertRecord(DBName, tableName, 1, "Nothing", logger);
