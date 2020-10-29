@@ -9,7 +9,7 @@ Only one validation settings to be specified
     <LogLevel>All</LogLevel>
   </LoggerSettings>
   
-  <ValidationSettings>
+  
  
     <ValidationSetting>
       <Percentage>20</Percentage>
@@ -18,5 +18,5 @@ Only one validation settings to be specified
 
    
     
-  </ValidationSettings>
+  
 </Settings>

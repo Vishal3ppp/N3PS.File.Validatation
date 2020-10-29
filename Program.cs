@@ -35,6 +35,7 @@ namespace N3PS.File.Validatation
             HDDCheck check = new HDDCheck();
             bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath, logger);
 
+            //Check for free space
             if(!isFreeSpaceAvailable)
             {
                 return 0;
