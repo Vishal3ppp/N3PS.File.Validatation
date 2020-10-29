@@ -5,18 +5,8 @@
 Only one validation settings to be specified
 -->
 <Settings>
-  <LoggerSettings>
-    <LogLevel>All</LogLevel>
-  </LoggerSettings>
-  
-  
- 
-    <ValidationSetting>
+      <ValidationSetting>
       <Percentage>20</Percentage>
       <Time>30</Time>
     </ValidationSetting>
-
-   
-    
-  
 </Settings>
