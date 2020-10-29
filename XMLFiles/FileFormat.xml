@@ -2,7 +2,7 @@
 <FlatFileFormat>
   <HeaderExist>No</HeaderExist>
   <RecordSize>170</RecordSize>
-  <FlatFilePath>C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT</FlatFilePath>
+  <FlatFilePath>D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\FlatFile\ZSB120OM.OUT</FlatFilePath>
   <Fields>
     <Field Name="NRIC Number" ColumnNumber="1">
       <StartPos>1</StartPos>
