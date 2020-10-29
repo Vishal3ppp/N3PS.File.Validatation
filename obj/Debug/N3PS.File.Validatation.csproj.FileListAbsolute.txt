@@ -9,3 +9,11 @@ D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\NLog.
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\NLog.dll
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\NLog.xml
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Debug\N3PS.File.Validatation.csproj.CopyComplete
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\EntityFramework.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\EntityFramework.SqlServer.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\System.Data.SQLite.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\System.Data.SQLite.EF6.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\System.Data.SQLite.Linq.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\EntityFramework.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\EntityFramework.SqlServer.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\System.Data.SQLite.xml
