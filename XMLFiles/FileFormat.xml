@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlatFileFormat>
+  <HeaderExist>No</HeaderExist>
+  <RecordSize>170</RecordSize>
+  <FlatFilePath>C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT</FlatFilePath>
+  <Fields>
+    <Field Name="NRIC Number" ColumnNumber="1">
+      <StartPos>1</StartPos>
+      <Length>9</Length>
+    </Field>
+    
+    <Field Name="Name" ColumnNumber="2">
+      <StartPos>10</StartPos>
+      <Length>66</Length>
+    </Field>
+    
+    <Field Name="MHA_Address_type" ColumnNumber="3">
+      <StartPos>76</StartPos>
+      <Length>1</Length>
+    </Field>
+    
+    <Field Name="MHA_Block No" ColumnNumber="4">
+      <StartPos>77</StartPos>
+      <Length>5</Length>
+    </Field>
+    
+    <Field Name="MHA_Street Name" ColumnNumber="5">
+      <StartPos>82</StartPos>
+      <Length>32</Length>
+    </Field>
+
+
+    <Field Name="MHA _Floor No" ColumnNumber="6">
+      <StartPos>114</StartPos>
+      <Length>2</Length>
+    </Field>
+
+
+    <Field Name="MHA _Unit No" ColumnNumber="7">
+      <StartPos>116</StartPos>
+      <Length>5</Length>
+    </Field>
+
+    <Field Name="MHA_Building Name" ColumnNumber="8">
+      <StartPos>121</StartPos>
+      <Length>30</Length>
+    </Field>
+
+
+    <Field Name="MHA_New_PostalCode" ColumnNumber="9">
+      <StartPos>151</StartPos>
+      <Length>6</Length>
+    </Field>
+
+
+    <Field Name="Invalid address tag" ColumnNumber="10">
+      <StartPos>157</StartPos>
+      <Length>1</Length>
+    </Field>
+
+
+    <Field Name="Residential Status" ColumnNumber="11">
+      <StartPos>158</StartPos>
+      <Length>1</Length>
+    </Field>
+
+
+    <Field Name="Gender" ColumnNumber="12">
+      <StartPos>159</StartPos>
+      <Length>1</Length>
+    </Field>
+
+
+    <Field Name="Date of Birth" ColumnNumber="13">
+      <StartPos>160</StartPos>
+      <Length>8</Length>
+    </Field>
+
+
+    <Field Name="Ethnic Group" ColumnNumber="14">
+      <StartPos>168</StartPos>
+      <Length>1</Length>
+    </Field>
+
+
+    <Field Name="Dialect" ColumnNumber="15">
+      <StartPos>169</StartPos>
+      <Length>2</Length>
+    </Field>
+    
+    
+  </Fields>
+</FlatFileFormat>

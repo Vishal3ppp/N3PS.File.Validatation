@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+0 - Percentage
+1 - Time in minutes
+Only one validation settings to be specified
+-->
+<Settings>
+  <LoggerSettings>
+    <LogLevel>All</LogLevel>
+  </LoggerSettings>
+  
+  <ValidationSettings>
+ 
+    <ValidationSetting>
+      <Percentage>20</Percentage>
+      <Time>30</Time>
+    </ValidationSetting>
+
+   
+    
+  </ValidationSettings>
+</Settings>

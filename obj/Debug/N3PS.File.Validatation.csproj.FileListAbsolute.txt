@@ -1,0 +1,11 @@
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\N3PS.File.Validatation.exe.config
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\N3PS.File.Validatation.exe
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\N3PS.File.Validatation.pdb
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Debug\N3PS.File.Validatation.csprojAssemblyReference.cache
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Debug\N3PS.File.Validatation.csproj.CoreCompileInputs.cache
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Debug\N3PS.File.Validatation.exe
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Debug\N3PS.File.Validatation.pdb
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\NLog.config
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\NLog.dll
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\NLog.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Debug\N3PS.File.Validatation.csproj.CopyComplete

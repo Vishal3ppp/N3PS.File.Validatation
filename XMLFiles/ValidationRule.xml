@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+0 - LengthValidation
+1 - ValueValidation
+2 - MandatoryCheck
+3 - NumberValidation
+4 - DateValidation
+-->
+<ValidationRules>
+  
+  <ValidationRule ValidationId="1" ValidationName="NRICValidation" ColumnNumber="1">
+    <ValidationTypes>
+      <ValidationType>LengthValidation</ValidationType>
+      <ValidationSize>9</ValidationSize>
+      <ErrorMessage>Invalid NRIC</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+  
+  <ValidationRule ValidationId="2" ValidationName="NameValidation" ColumnNumber="2">
+    <ValidationTypes>
+      <ValidationType>MandatoryCheck</ValidationType>
+      <ErrorMessage>Invalid Name</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+
+  <ValidationRule ValidationId="3" ValidationName="MHAAddressTypeValidation" ColumnNumber="3">
+    <ValidationTypes>
+      <ValidationType>ValueValidation</ValidationType>
+      <Values>
+        <value>A</value>
+        <value>B</value>
+        <value>X</value>
+        <value>C</value>
+        <value>D</value>
+        <value>E</value>
+        <value>F</value>
+        <value>Q</value>
+        <value>I</value>
+      </Values>
+      <ErrorMessage>Invalid MHA Address Type</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+
+
+    <ValidationRule ValidationId="4" ValidationName="PostCodeValidation_1" ColumnNumber="9">
+      <ValidationTypes>
+        <ValidationType>NumberValidation</ValidationType>
+        <ErrorMessage>Invalid Postal Code</ErrorMessage>
+      </ValidationTypes>
+    </ValidationRule>
+
+
+    <ValidationRule ValidationId="5" ValidationName="PostCodeValidation_2" ColumnNumber="9">
+      <ValidationTypes>
+        <ValidationType>LengthValidation</ValidationType>
+        <ValidationSize>6</ValidationSize>
+        <ErrorMessage>Invalid Postal Code</ErrorMessage>
+      </ValidationTypes>
+    </ValidationRule>
+
+
+    <ValidationRule ValidationId="6" ValidationName="InvalidAddressTagValidation" ColumnNumber="10">
+      <ValidationTypes>
+        <ValidationType>ValueValidation</ValidationType>
+        <Values>
+          <value>Y</value>
+          <value>N</value>
+         </Values>
+        <ErrorMessage>Invalid Address Tag</ErrorMessage>
+      </ValidationTypes>
+    </ValidationRule>
+
+
+  <ValidationRule ValidationId="7" ValidationName="ResidentialAddressValidation" ColumnNumber="11">
+    <ValidationTypes>
+      <ValidationType>ValueValidation</ValidationType>
+      <Values>
+        <value>C</value>
+        <value>P</value>
+      </Values>
+      <ErrorMessage>Invalid Residential Address</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+
+  <ValidationRule ValidationId="8" ValidationName="GenderValidation" ColumnNumber="12">
+    <ValidationTypes>
+      <ValidationType>ValueValidation</ValidationType>
+      <Values>
+        <value>F</value>
+        <value>M</value>
+        <value>U</value>
+      </Values>
+      <ErrorMessage>Invalid Gender</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+
+
+  <ValidationRule ValidationId="9" ValidationName="DateofBirthValidation" ColumnNumber="13">
+    <ValidationTypes>
+      <ValidationType>DateValidation</ValidationType>
+      <DateFormat>YYYYMMDD</DateFormat>
+      <ErrorMessage>Invalid Date of Birth</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+
+  <ValidationRule ValidationId="10" ValidationName="EthnicGroupValidation" ColumnNumber="14">
+    <ValidationTypes>
+      <ValidationType>ValueValidation</ValidationType>
+      <Values>
+        <value>C</value>
+        <value>M</value>
+        <value>I</value>
+        <value>O</value>
+      </Values>
+      <ErrorMessage>Invalid Ethnic Group</ErrorMessage>
+    </ValidationTypes>
+  </ValidationRule>
+ </ValidationRules>
