@@ -81,7 +81,7 @@
 
   <ValidationRule ValidationId="9" ValidationName="DateofBirthValidation" ColumnNumber="13">
       <ValidationType>DateValidation</ValidationType>
-      <DateFormat>YYYYMMDD</DateFormat>
+      <DateFormat>yyyyMMdd</DateFormat>
       <ErrorMessage>Invalid Date of Birth</ErrorMessage>
   </ValidationRule>
 
