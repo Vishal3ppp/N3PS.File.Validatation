@@ -81,8 +81,8 @@ namespace N3PS.File.Validatation
             FileHelper helper = new FileHelper();
             helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, logger);
 
-            
-            
+            sqlManipulation.CloseDBConnection(m_dbConnection);
+
             //sqlLite.CreateTable(DBName, CreateTableSQLQuery, logger);
             //sqlLite.InsertRecord(DBName, tableName, 1, "Nothing", logger);
             //DataSet dt = sqlLite.RetrieveRecord(DBName, tableName, 1,  logger);

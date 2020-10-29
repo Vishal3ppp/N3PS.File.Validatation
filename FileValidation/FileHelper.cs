@@ -32,22 +32,28 @@ namespace N3PS.File.Validatation.FileValidation
             logger.Info($"Start Time : {startTime}");
             logger.Info($"End Time : {endTime}");
 
+            Random rmd = new Random();
 
             for (int i = 0; i < totalCount; i++)
             {
-                Random rmd = new Random();
+                
                 bool isError = false;
 
 
                 int randomLineNumber = -1;
                 DataSet ds = new DataSet();
-
+                
                 do
                 {
                     randomLineNumber = rmd.Next(allLines.Length-1);
-                    ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber, logger);
+                    logger.Info($"Rnadom Line Number : {randomLineNumber+1}");
+                    ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber+1, logger);
+                    logger.Info($"Total Records with Flat File Line Number : {randomLineNumber+1} and Total Returned Count : {ds.Tables[0].Rows.Count}");
 
                 } while (ds.Tables[0].Rows.Count > 0);
+
+
+                
                 string randomLineContent = allLines[randomLineNumber];
 
                 //Check Validations
@@ -140,7 +146,7 @@ namespace N3PS.File.Validatation.FileValidation
 
                 if(!isError)
                 {
-                    sqlManipulation.InsertRecord(connection, tableName, randomLineNumber, logger);
+                    sqlManipulation.InsertRecord(connection, tableName, randomLineNumber+1, logger);
                 }
 
                 if (startTime > endTime)
