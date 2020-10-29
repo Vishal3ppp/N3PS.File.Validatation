@@ -172,8 +172,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
             tableCreateScript.AppendLine("(");
 
            // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
-            tableCreateScript.AppendLine("FlatFileRowNumber INT,");
-            tableCreateScript.AppendLine("[ErrorMessage] VARCHAR(MAX)");
+            tableCreateScript.AppendLine("FlatFileRowNumber INT");
             tableCreateScript.AppendLine(")");
 
             return tableCreateScript.ToString();

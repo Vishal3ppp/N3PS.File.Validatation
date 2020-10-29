@@ -82,22 +82,22 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
 
 
 
-        public bool InsertRecord(string DBName, string tableName, int flatFileRecordNumber, string errorMessage, Logger logger)
+        public bool InsertRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, Logger logger)
         {
             bool isRecordInserted = false;
             try
             {
-                SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
-                m_dbConnection.Open();
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
 
-                string query = $"INSERT INTO {tableName}(FlatFileRowNumber,ErrorMessage) VALUES({flatFileRecordNumber},'{errorMessage}')";
+                string query = $"INSERT INTO {tableName}(FlatFileRowNumber) VALUES({flatFileRecordNumber})";
 
                 SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
                 command.ExecuteNonQuery();
 
 
 
-                m_dbConnection.Close();
+                //m_dbConnection.Close();
                 isRecordInserted = true;
             }
             catch (Exception excp)
@@ -110,16 +110,16 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
 
 
 
-        public DataSet RetrieveRecord(string DBName, string tableName, int flatFileRecordNumber, Logger logger)
+        public DataSet RetrieveRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, Logger logger)
         {
             DataSet myDataSet = new DataSet();
 
             try
             {
-                string query = $"SELECT FlatFileRowNumber,ErrorMessage FROM {tableName} WHERE FlatFileRowNumber =  {flatFileRecordNumber}";
+                string query = $"SELECT FlatFileRowNumber FROM {tableName} WHERE FlatFileRowNumber =  {flatFileRecordNumber}";
 
-                SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
-                m_dbConnection.Open();
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
 
                 SQLiteDataAdapter myAdapter = new SQLiteDataAdapter(query, m_dbConnection);
                 //myAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
@@ -127,7 +127,7 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
                 myAdapter.Fill(myDataSet, "Records");
 
 
-                m_dbConnection.Close();
+                //m_dbConnection.Close();
 
 
 
@@ -139,6 +139,15 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
             }
 
             return myDataSet;
+        }
+
+
+        public SQLiteConnection OpenDBConnection(string DBName)
+        {
+            SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+            m_dbConnection.Open();
+
+            return m_dbConnection;
         }
     }
 }

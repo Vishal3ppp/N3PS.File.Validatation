@@ -8,12 +8,14 @@
 -->
 <ValidationRules>
   
-  <ValidationRule ValidationId="1" ValidationName="NRICValidation" ColumnNumber="1">
+  <ValidationRule ValidationId="1" ValidationName="NRICLengthValidation" ColumnNumber="1">
        <ValidationType>LengthValidation</ValidationType>
       <ValidationSize>9</ValidationSize>
       <ErrorMessage>Invalid NRIC</ErrorMessage>
  </ValidationRule>
-  
+
+
+
   <ValidationRule ValidationId="2" ValidationName="NameValidation" ColumnNumber="2">
        <ValidationType>MandatoryCheck</ValidationType>
       <ErrorMessage>Invalid Name</ErrorMessage>

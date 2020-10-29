@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using N3PS.File.Validatation.SQLLiteManiputation;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(settingsXMLFile);
 
+            
 
             try
             {
