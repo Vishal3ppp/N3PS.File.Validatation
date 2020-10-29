@@ -59,17 +59,20 @@ namespace N3PS.File.Validatation
                 return 0;
             }
 
-            SQLiteHelper sqlLite = new SQLiteHelper();
+            //SQLiteHelper sqlLite = new SQLiteHelper();
             string DBName = "ICA";
-            bool isDBExist = sqlLite.IsDBExist(DBName);
-            if(!isDBExist)
-            {
-                sqlLite.CreateDB(DBName, logger);
-            }
+            FileHelper helpe = new FileHelper();
+            helpe.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, DBName, tableName, logger);
+
+            //bool isDBExist = sqlLite.IsDBExist(DBName);
+            //if(!isDBExist)
+            //{
+            //    sqlLite.CreateDB(DBName, logger);
+            //}
             
-            sqlLite.CreateTable(DBName, CreateTableSQLQuery, logger);
-            sqlLite.InsertRecord(DBName, tableName, 1, "Nothing", logger);
-            DataSet dt = sqlLite.RetrieveRecord(DBName, tableName, 1,  logger);
+            //sqlLite.CreateTable(DBName, CreateTableSQLQuery, logger);
+            //sqlLite.InsertRecord(DBName, tableName, 1, "Nothing", logger);
+            //DataSet dt = sqlLite.RetrieveRecord(DBName, tableName, 1,  logger);
             //FileHelper f = new FileHelper();
             //f.ValidateFile(@"C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT");
 
