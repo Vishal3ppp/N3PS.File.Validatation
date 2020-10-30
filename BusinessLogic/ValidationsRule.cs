@@ -23,5 +23,7 @@ namespace N3PS.File.Validatation.BusinessLogic
         public List<string> Values = new List<string>();
 
         public string DateFormat { get; set; }
+
+        public DLLDetails DLLInfo { get; set; }
     }
 }

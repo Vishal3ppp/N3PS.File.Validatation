@@ -3,12 +3,14 @@ using N3PS.File.Validatation.SQLLiteManiputation;
 using N3PS.File.Validatation.XMLConfigClasses;
 using NLog;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +18,7 @@ namespace N3PS.File.Validatation.FileValidation
 {
     class FileHelper
     {
-        public ProcessedDetails ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Logger logger)
+        public ProcessedDetails ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Hashtable assemblyDetails, Logger logger)
         {
             string[] allLines = System.IO.File.ReadAllLines(fetchedFlatFileObj.FlatFilePath);
             int totalCount = Convert.ToInt32((fetchedSettingsObj.Percentage / 100) * allLines.Length);
@@ -83,7 +85,7 @@ namespace N3PS.File.Validatation.FileValidation
                                 {
                                     if (content.Length != validationRule.ValidationSize)
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber + 1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -93,7 +95,7 @@ namespace N3PS.File.Validatation.FileValidation
                                 {
                                     if (content == string.Empty)
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber + 1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -103,7 +105,7 @@ namespace N3PS.File.Validatation.FileValidation
                                 {
                                     if (!validationRule.Values.Contains(content))
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber + 1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -116,7 +118,7 @@ namespace N3PS.File.Validatation.FileValidation
 
                                     if (!int.TryParse(content, out number))
                                     {
-                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber + 1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
                                         isError = true;
                                     }
                                 }
@@ -132,7 +134,7 @@ namespace N3PS.File.Validatation.FileValidation
                                     catch (Exception excp)
                                     {
 
-                                        logger.Error($"Flat File Line Number : {randomLineNumber+1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                        logger.Error($"Flat File Line Number : {randomLineNumber + 1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
 
 
                                         logger.Error(excp.ToString() + " --- " + excp.StackTrace);
@@ -140,6 +142,44 @@ namespace N3PS.File.Validatation.FileValidation
                                     }
 
 
+                                }
+                                break;
+
+
+                            case "externalroutinecall":
+                                {
+                                    Assembly assembly = assemblyDetails[validationRule.ColumnNumber] as Assembly;
+                                    Type type = assembly.GetType(validationRule.DLLInfo.FullyQualififedClassName);
+                                    if (type != null)
+                                    {
+                                        MethodInfo methodInfo = type.GetMethod(validationRule.DLLInfo.RoutineName);
+
+                                        if (methodInfo != null)
+                                        {
+                                            object result = null;
+                                            ParameterInfo[] parameters = methodInfo.GetParameters();
+                                            object classInstance = Activator.CreateInstance(type, null);
+
+                                           
+                                                // This works fine
+                                                if (validationRule.DLLInfo.IsStaticMethod)
+                                                    result = methodInfo.Invoke(null, new object[] { content });
+                                                else
+                                                    result = methodInfo.Invoke(classInstance, new object[] { content });
+
+
+                                            if (!(bool)result)
+                                            {
+                                                logger.Error($"Flat File Line Number : {randomLineNumber + 1}, Field Name : {fields.FieldName}, Error Message : {validationRule.ErrorMessage} ");
+                                                isError = true;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            logger.Error($"Error while getting method infor for {validationRule.DLLInfo.DLLName}");
+                                            isError = true;
+                                        }
+                                    }
                                 }
                                 break;
                         }

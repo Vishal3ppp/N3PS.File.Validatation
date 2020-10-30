@@ -11,8 +11,10 @@ using System.Data.SQLite;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace N3PS.File.Validatation
 {
@@ -25,11 +27,11 @@ namespace N3PS.File.Validatation
 
 
             //2. XML File Initialization
-            string FlatFileXmlName = @"..\..\XMLFiles\FileFormat.xml";
+            string FlatFileXmlName = @".\XMLFiles\FileFormat.xml";
 
-            string SettingsXmlName = @"..\..\XMLFiles\Settings.xml";
+            string SettingsXmlName = @".\XMLFiles\Settings.xml";
 
-            string ValidationRuleXmlName = @"..\..\XMLFiles\ValidationRule.xml";
+            string ValidationRuleXmlName = @".\XMLFiles\ValidationRule.xml";
 
             //3. Convert FlatFile to C# objects
             FlatFile flatFile = new FlatFile();
@@ -37,15 +39,53 @@ namespace N3PS.File.Validatation
             string CreateTableSQLQuery = flatFile.CreateFlatFileTableScript(tableName);
             FlatFile fetchedFlatFileObj = flatFile.GetInstance(FlatFileXmlName, logger);
 
-            //4. Convert Settings File to C# objects
-            SettingsFile settingsFile = new SettingsFile();
+            if (fetchedFlatFileObj == null)
+            {
+                logger.Error($"Error while loading the Flat File XML : {FlatFileXmlName}");
+                return 0;
+            }
+                //4. Convert Settings File to C# objects
+                SettingsFile settingsFile = new SettingsFile();
             SettingsFile fetchedSettingsObj = settingsFile.GetInstance(SettingsXmlName, logger);
 
-
+            if (fetchedSettingsObj == null)
+            {
+                logger.Error($"Error while loading the Settings File XML : {SettingsXmlName}");
+                return 0;
+            }
             //5. Convert ValidationRule to C# objects
             ValidationRuleFile validationRuleFile = new ValidationRuleFile();
             ValidationRuleFile fetchedValidationRuleObj = validationRuleFile.GetInstance(ValidationRuleXmlName, logger);
 
+            if (fetchedValidationRuleObj == null)
+            {
+                logger.Error($"Error while loading the Validation Rule File XML : {ValidationRuleXmlName}");
+                return 0;
+            }
+
+
+            var dllsDetails = fetchedValidationRuleObj.ValidationRules.Where(x => x.DLLInfo != null && !string.IsNullOrEmpty(x.DLLInfo.DLLName) ).ToList();
+
+            Hashtable assemblyDetails = new Hashtable();
+
+            if (dllsDetails.Count() > 0)
+            {
+                foreach (ValidationsRule rule in dllsDetails)
+                {
+                    FileInfo f = new FileInfo(@".\ExternalDLLs\" + rule.DLLInfo.DLLName);
+                    logger.Info($"Full File Name : {f.FullName}");
+                    if (!System.IO.File.Exists(f.FullName))
+                    {
+                        logger.Error($"External DLL is not exist {rule.DLLInfo.DLLName} in ExternalDLLs folder.");
+                        return 0;
+                    }
+                    else
+                    {
+                        Assembly assembly = Assembly.LoadFile(f.FullName);
+                        assemblyDetails.Add(rule.ColumnNumber, assembly);
+                    }
+                }
+            }
             //6. HDD Size Check
             HDDCheck check = new HDDCheck();
             bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath, logger);
@@ -79,7 +119,7 @@ namespace N3PS.File.Validatation
             }
 
             FileHelper helper = new FileHelper();
-            ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, logger);
+            ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, logger);
 
 
             logger.Info("------------------------------------------------------------");

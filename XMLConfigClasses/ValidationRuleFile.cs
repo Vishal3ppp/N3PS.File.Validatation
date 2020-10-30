@@ -141,6 +141,62 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                     }
 
 
+
+                    rule.DLLInfo = new DLLDetails();
+                    XmlNode DLLNameNode = validationNode.SelectSingleNode("DLL/DLLName");
+                    if (DLLNameNode != null)
+                    {
+
+                        rule.DLLInfo.DLLName = DLLNameNode.InnerText.Trim();
+                        logger.Info("Fetched DLLName element : " + rule.DLLInfo.DLLName);
+                    }
+
+
+                    XmlNode fullyQualififedClassNameNode = validationNode.SelectSingleNode("DLL/FullyQualififedClassName");
+                    if (fullyQualififedClassNameNode != null)
+                    {
+
+                        rule.DLLInfo.FullyQualififedClassName = fullyQualififedClassNameNode.InnerText.Trim();
+                        logger.Info("Fetched FullyQualififedClassName element : " + rule.DLLInfo.FullyQualififedClassName);
+                    }
+
+
+                    XmlNode routineNameNode = validationNode.SelectSingleNode("DLL/RoutineName");
+                    if (routineNameNode != null)
+                    {
+
+                        rule.DLLInfo.RoutineName = routineNameNode.InnerText.Trim();
+                        logger.Info("Fetched Routine Name element : " + rule.DLLInfo.RoutineName);
+
+                        if (routineNameNode.Attributes["IsStaticMethod"] != null)
+                        {
+
+                            rule.DLLInfo.IsStaticMethod = Convert.ToBoolean(routineNameNode.Attributes["IsStaticMethod"].Value);
+                            logger.Info("Fetched IsStaticMethod " + rule.DLLInfo.IsStaticMethod);
+                        }
+
+
+                        if (routineNameNode.Attributes["ReturnType"] != null)
+                        {
+
+                            rule.DLLInfo.ReturnType = routineNameNode.Attributes["ReturnType"].Value;
+                            logger.Info("Fetched ReturnType " + rule.DLLInfo.ReturnType);
+                        }
+
+
+
+                        if (routineNameNode.Attributes["InputType"] != null)
+                        {
+
+                            rule.DLLInfo.InputType = routineNameNode.Attributes["InputType"].Value;
+                            logger.Info("Fetched InputType " + rule.DLLInfo.InputType);
+                        }
+                    }
+
+
+
+
+
                     validations.ValidationRules.Add(rule);
                 }
             }

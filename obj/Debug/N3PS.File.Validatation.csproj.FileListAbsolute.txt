@@ -17,3 +17,6 @@ D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\Syste
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\EntityFramework.xml
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\EntityFramework.SqlServer.xml
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\System.Data.SQLite.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\XMLFiles\FileFormat.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\XMLFiles\Settings.xml
+D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Debug\XMLFiles\ValidationRule.xml
