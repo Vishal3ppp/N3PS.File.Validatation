@@ -33,7 +33,7 @@ namespace N3PS.File.Validatation
 
             //3. Convert FlatFile to C# objects
             FlatFile flatFile = new FlatFile();
-            string tableName = "ICA_" + DateTime.Now.ToString("yyyyMMdd");
+            string tableName = "ICADetails";
             string CreateTableSQLQuery = flatFile.CreateFlatFileTableScript(tableName);
             FlatFile fetchedFlatFileObj = flatFile.GetInstance(FlatFileXmlName, logger);
 
@@ -79,8 +79,14 @@ namespace N3PS.File.Validatation
             }
 
             FileHelper helper = new FileHelper();
-            helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, logger);
+            ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, logger);
 
+
+            logger.Info("------------------------------------------------------------");
+            logger.Info($"Total Records: " + processedDetails.TotalRecords);
+            logger.Info($"Total Error Records: " + processedDetails.TotalErrorRecords);
+            logger.Info($"Total Seccessfully Processed Records: " + processedDetails.TotalSeccessfullyProcessedRecords);
+            logger.Info("------------------------------------------------------------");
             sqlManipulation.CloseDBConnection(m_dbConnection);
 
             //sqlLite.CreateTable(DBName, CreateTableSQLQuery, logger);
