@@ -110,15 +110,15 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
         }
 
 
-        public bool InsertRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, Logger logger)
+        public bool InsertRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, bool IsError , Logger logger)
         {
             bool isRecordInserted = false;
             try
             {
                 //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
                 //m_dbConnection.Open();
-
-                string query = $"INSERT INTO {tableName}(FlatFileRowNumber) VALUES({flatFileRecordNumber})";
+                string isErrorString = IsError? "1":"0";
+                string query = $"INSERT INTO {tableName}(FlatFileRowNumber, IsError) VALUES({flatFileRecordNumber},{isErrorString})";
 
                 SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
                 command.ExecuteNonQuery();
@@ -136,7 +136,40 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
             return isRecordInserted;
         }
 
+        public DataSet GetTotalRecords(SQLiteConnection m_dbConnection, string tableName, Logger logger)
+        {
+            DataSet myDataSet = new DataSet();
+            //bool isRecordInserted = false;
+            try
+            {
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
 
+                string query = $"SELECT IsError, Count(1) AS TotalRecords FROM {tableName} GROUP BY IsError";
+                //string query = $"SELECT FlatFileRowNumber FROM {tableName} WHERE FlatFileRowNumber =  {flatFileRecordNumber}";
+
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
+
+                SQLiteDataAdapter myAdapter = new SQLiteDataAdapter(query, m_dbConnection);
+                //myAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+
+                myAdapter.Fill(myDataSet, "Records");
+                //SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
+                //command.ExecuteNonQuery();
+
+
+
+                //m_dbConnection.Close();
+                
+            }
+            catch (Exception excp)
+            {
+                logger.Error("Error while creating sql lite Table : " + excp.ToString() + " --- " + excp.StackTrace);
+            }
+
+            return myDataSet;
+        }
 
         public DataSet RetrieveRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, Logger logger)
         {

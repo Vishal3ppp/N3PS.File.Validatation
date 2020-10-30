@@ -109,6 +109,9 @@ namespace N3PS.File.Validatation
 
             //SQLiteHelper sqlLite = new SQLiteHelper();
             SQLiteConnection m_dbConnection = sqlManipulation.OpenDBConnection(DBName);
+
+       
+
             if (fetchedSettingsObj.NewRun)
             {
                  
@@ -117,9 +120,9 @@ namespace N3PS.File.Validatation
                 //sqlManipulation.CloseDBConnection(m_dbConnection);
 
             }
-
+            DataSet dsTotalRecords = sqlManipulation.GetTotalRecords(m_dbConnection, tableName, logger);
             FileHelper helper = new FileHelper();
-            ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, logger);
+            ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, dsTotalRecords, logger);
 
 
             logger.Info("------------------------------------------------------------");

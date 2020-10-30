@@ -18,15 +18,49 @@ namespace N3PS.File.Validatation.FileValidation
 {
     class FileHelper
     {
-        public ProcessedDetails ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Hashtable assemblyDetails, Logger logger)
+        public ProcessedDetails ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Hashtable assemblyDetails, DataSet dsTotalRecords, Logger logger)
         {
             string[] allLines = System.IO.File.ReadAllLines(fetchedFlatFileObj.FlatFilePath);
             int totalCount = Convert.ToInt32((fetchedSettingsObj.Percentage / 100) * allLines.Length);
+            
 
-            logger.Info($"Total count = {totalCount}, ({fetchedSettingsObj.Percentage} / 100 )* {allLines.Length}");
-            int TotalRecords = allLines.Length;
+
+            ProcessedDetails processedDetails = new ProcessedDetails();
+            int TotalRecords = 0;
             int TotalErrorRecords = 0;
             int TotalSeccessfullyProcessedRecords = 0;
+            if (dsTotalRecords.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow dr in dsTotalRecords.Tables[0].Rows)
+                {
+                    int records = Convert.ToInt32(dr[1].ToString());
+
+                    if(Convert.ToBoolean(dr[0].ToString()))
+                    {
+                        TotalErrorRecords = TotalErrorRecords + records;
+                    }
+                    else
+                    {
+                        TotalSeccessfullyProcessedRecords = TotalSeccessfullyProcessedRecords + records;
+                    }
+                    TotalRecords = records + TotalRecords;
+                    
+                }
+
+                if (TotalRecords >= allLines.Length)
+                {
+                    logger.Info("All records are processed, in case of any error please check.");
+                    
+                    processedDetails.TotalRecords = TotalRecords;
+                    processedDetails.TotalErrorRecords = TotalErrorRecords;
+                    processedDetails.TotalSeccessfullyProcessedRecords = TotalSeccessfullyProcessedRecords;
+                    return processedDetails;
+                }
+            }
+
+            TotalRecords = allLines.Length;
+            logger.Info($"Total count = {totalCount}, ({fetchedSettingsObj.Percentage} / 100 )* {allLines.Length}");
+            
 
             // SQLiteConnection connection = sqlManipulation.OpenDBConnection(DBName);
 
@@ -46,18 +80,24 @@ namespace N3PS.File.Validatation.FileValidation
 
                 int randomLineNumber = -1;
                 DataSet ds = new DataSet();
-                
-                //do
-                //{
-                    randomLineNumber = rmd.Next(allLines.Length-1);
-                    logger.Info($"Rnadom Line Number : {randomLineNumber+1}");
-                //    ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber+1, logger);
-                //    logger.Info($"Total Records with Flat File Line Number : {randomLineNumber+1} and Total Returned Count : {ds.Tables[0].Rows.Count}");
 
-                //} while (ds.Tables[0].Rows.Count > 0);
+                randomLineNumber = rmd.Next(allLines.Length - 1);
+                logger.Info($"Generated Line Number : {randomLineNumber + 1}");
+                ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber + 1, logger);
+                while (ds.Tables[0].Rows.Count > 0) 
+                {
+                    randomLineNumber = randomLineNumber + 1;
+                    if(randomLineNumber > allLines.Length-1)
+                    {
+                        randomLineNumber = 0;
+                    }
+                    ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber + 1, logger);
+                    logger.Info($"Total Records with Flat File Line Number : {randomLineNumber + 1} and Total Returned Count : {ds.Tables[0].Rows.Count}");
+
+                }
 
 
-                
+                logger.Info($"Random Line Number : {randomLineNumber + 1}");
                 string randomLineContent = allLines[randomLineNumber];
 
                 //Check Validations
@@ -188,13 +228,15 @@ namespace N3PS.File.Validatation.FileValidation
 
                 if(!isError)
                 {
-                    sqlManipulation.InsertRecord(connection, tableName, randomLineNumber+1, logger);
+                   
                     TotalSeccessfullyProcessedRecords++;
                 }
                 else
                 {
                     TotalErrorRecords++;
                 }
+
+                sqlManipulation.InsertRecord(connection, tableName, randomLineNumber + 1, isError, logger);
 
                 if (startTime > endTime)
                 {
@@ -203,7 +245,6 @@ namespace N3PS.File.Validatation.FileValidation
                     break;
                 }
             }
-            ProcessedDetails processedDetails = new ProcessedDetails();
             processedDetails.TotalRecords = TotalRecords;
             processedDetails.TotalErrorRecords = TotalErrorRecords;
             processedDetails.TotalSeccessfullyProcessedRecords = TotalSeccessfullyProcessedRecords;

@@ -48,7 +48,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
 
 
                 logger.Info("Retrieving the NewRun element.");
-                XmlNode newRunNode = xmlDoc.SelectSingleNode("//Settings/LoggerSettings/LogLevel");
+                XmlNode newRunNode = xmlDoc.SelectSingleNode("//Settings/RunSettings/NewRun");
                 if (newRunNode != null)
                 {
                     logger.Info("NewRun element is exist.");
