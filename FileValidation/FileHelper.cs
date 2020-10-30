@@ -21,6 +21,11 @@ namespace N3PS.File.Validatation.FileValidation
         public ProcessedDetails ValidateFile(FlatFile fetchedFlatFileObj, SettingsFile fetchedSettingsObj, ValidationRuleFile fetchedValidationRuleObj, SQLiteHelper sqlManipulation, SQLiteConnection connection, string DBName, string tableName, Hashtable assemblyDetails, DataSet dsTotalRecords, Logger logger)
         {
             string[] allLines = System.IO.File.ReadAllLines(fetchedFlatFileObj.FlatFilePath);
+
+            if (fetchedSettingsObj.Percentage == 0)
+            {
+                fetchedSettingsObj.Percentage = 100;
+            }
             int totalCount = Convert.ToInt32((fetchedSettingsObj.Percentage / 100) * allLines.Length);
             
 
@@ -65,7 +70,12 @@ namespace N3PS.File.Validatation.FileValidation
             // SQLiteConnection connection = sqlManipulation.OpenDBConnection(DBName);
 
             DateTime startTime = DateTime.Now;
+            if(fetchedSettingsObj.Time == 0)
+            {
+                fetchedSettingsObj.Time = 24 * 60 * 10;
+            }
 
+            
             DateTime endTime = startTime.AddMinutes(fetchedSettingsObj.Time);
             logger.Info($"Start Time : {startTime}");
             logger.Info($"End Time : {endTime}");
