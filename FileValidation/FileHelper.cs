@@ -94,6 +94,8 @@ namespace N3PS.File.Validatation.FileValidation
                 randomLineNumber = rmd.Next(allLines.Length - 1);
                 logger.Info($"Generated Line Number : {randomLineNumber + 1}");
                 ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber + 1, logger);
+                int loopIteration = 1;
+                bool allCompleted = false;
                 while (ds.Tables[0].Rows.Count > 0) 
                 {
                     randomLineNumber = randomLineNumber + 1;
@@ -103,10 +105,16 @@ namespace N3PS.File.Validatation.FileValidation
                     }
                     ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber + 1, logger);
                     logger.Info($"Total Records with Flat File Line Number : {randomLineNumber + 1} and Total Returned Count : {ds.Tables[0].Rows.Count}");
-
+                    if (loopIteration > TotalRecords)
+                    {
+                        allCompleted = true;
+                        break;
+                    }
+                    loopIteration++;
                 }
 
-
+                if (allCompleted)
+                    break;
                 logger.Info($"Random Line Number : {randomLineNumber + 1}");
                 string randomLineContent = allLines[randomLineNumber];
 
