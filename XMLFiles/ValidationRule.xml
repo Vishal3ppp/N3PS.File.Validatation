@@ -101,7 +101,7 @@
 
 
 
-  <ValidationRule ValidationId="11" ValidationName="NRICExternalCallValidation" ColumnNumber="1">
+  <!--<ValidationRule ValidationId="11" ValidationName="NRICExternalCallValidation" ColumnNumber="1">
     <ValidationType>ExternalRoutineCall</ValidationType>
     <DLL>
       <DLLName>N3PS.NRICValidation.dll</DLLName>
@@ -122,5 +122,5 @@
       <RoutineName IsStaticMethod="True" ReturnType="bool" InputType="string">IsValidPostCode</RoutineName>
     </DLL>
     <ErrorMessage>Given Postal Code is not exist in DB.</ErrorMessage>
-  </ValidationRule>
+  </ValidationRule>-->
  </ValidationRules>

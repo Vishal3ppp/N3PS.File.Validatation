@@ -15,7 +15,6 @@ D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\Ent
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\EntityFramework.SqlServer.xml
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\NLog.xml
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\bin\Release\System.Data.SQLite.xml
-D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.csprojAssemblyReference.cache
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.csproj.CoreCompileInputs.cache
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.csproj.CopyComplete
 D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\obj\Release\N3PS.File.Validatation.exe

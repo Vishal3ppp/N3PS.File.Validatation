@@ -24,8 +24,47 @@ namespace N3PS.File.Validatation
         {
             //1. Logger initialization
             Logger logger = LogManager.GetCurrentClassLogger();
+            int TimePart = 0;
+            decimal PercentagePart = 0M;
+            bool? RunSettingsPart = null;
+            if (args.Length > 0)
+            {
+                if(args.Where(x => x.ToLower() == "-help").ToList().Count > 0)
+                {
+                    logger.Info("-t for Time setting");
+                    logger.Info("-p for Percentage setting");
+                    return 0;
+                }
+                try
+                {
+                    var timePart = args.Where(x => x.ToLower().Contains("-t")).ToList();
+                    if (timePart.Count > 0)
+                    {
+                        TimePart = Convert.ToInt32(timePart[0].ToLower().Replace("-t", ""));
+                        logger.Info($"TimePart Argument Value : {TimePart}");
+                    }
 
 
+                    var percentagePart = args.Where(x => x.ToLower().Contains("-p")).ToList();
+                    if (percentagePart.Count > 0)
+                    {
+                        PercentagePart = Convert.ToDecimal(percentagePart[0].ToLower().Replace("-p", ""));
+                        logger.Info($"PercentagePart Argument Value : {PercentagePart}");
+                    }
+
+                    var runSettingsPart = args.Where(x => x.ToLower().Contains("-r")).ToList();
+                    if (runSettingsPart.Count > 0)
+                    {
+                        RunSettingsPart = Convert.ToBoolean(runSettingsPart[0].ToLower().Replace("-r", ""));
+                        logger.Info($"RunSettingsPart Argument Value : {RunSettingsPart}");
+                    }
+
+                }
+                catch(Exception excp)
+                {
+                    logger.Error("Error in processing the command level arguments. " + excp.ToString() + " --- " + excp.StackTrace);
+                }
+            }
             //2. XML File Initialization
             string FlatFileXmlName = @".\XMLFiles\FileFormat.xml";
 
@@ -44,6 +83,8 @@ namespace N3PS.File.Validatation
                 logger.Error($"Error while loading the Flat File XML : {FlatFileXmlName}");
                 return 0;
             }
+
+            
                 //4. Convert Settings File to C# objects
                 SettingsFile settingsFile = new SettingsFile();
             SettingsFile fetchedSettingsObj = settingsFile.GetInstance(SettingsXmlName, logger);
@@ -53,6 +94,34 @@ namespace N3PS.File.Validatation
                 logger.Error($"Error while loading the Settings File XML : {SettingsXmlName}");
                 return 0;
             }
+
+            if (TimePart != 0)
+            {
+                logger.Info($"Overidden Time Part from Settings.xml: {TimePart}");
+                fetchedSettingsObj.Time = TimePart;
+            }
+
+            if (PercentagePart != 0M)
+            {
+                logger.Info($"Overidden Percentage from Settings.xml: {PercentagePart}");
+                fetchedSettingsObj.Percentage = PercentagePart;
+            }
+
+
+            if (RunSettingsPart != null)
+            {
+                logger.Info($"Overidden Run Settings from Settings.xml: {RunSettingsPart}");
+                fetchedSettingsObj.NewRun = RunSettingsPart.Value;
+            }
+
+
+            logger.Info("Settings : Start ----------------------");
+            logger.Info($"Time : {fetchedSettingsObj.Time}");
+            logger.Info($"Percentage : {fetchedSettingsObj.Percentage}");
+            logger.Info($"NewRun : {fetchedSettingsObj.NewRun}");
+
+            logger.Info("Settings : END ----------------------");
+
             //5. Convert ValidationRule to C# objects
             ValidationRuleFile validationRuleFile = new ValidationRuleFile();
             ValidationRuleFile fetchedValidationRuleObj = validationRuleFile.GetInstance(ValidationRuleXmlName, logger);
