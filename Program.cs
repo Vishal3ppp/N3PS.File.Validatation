@@ -31,8 +31,13 @@ namespace N3PS.File.Validatation
             {
                 if(args.Where(x => x.ToLower() == "-help").ToList().Count > 0)
                 {
-                    logger.Info("-t for Time setting");
+                    logger.Info("-----------------------------------------------------------------------------");
+                    logger.Info("-t for Time setting in mins");
                     logger.Info("-p for Percentage setting");
+                    logger.Info("-r for Run setting (True/False)");
+                    logger.Info("Example : >N3PS.File.Validatation.exe -t30 -p100 -rTrue");
+                    logger.Info("Meaning program will be running 30 mins, 100% random record picked up and New table to be created for processing or not.");
+                    logger.Info("-----------------------------------------------------------------------------");
                     return 0;
                 }
                 try
