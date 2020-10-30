@@ -72,7 +72,7 @@ namespace N3PS.File.Validatation.FileValidation
             DateTime startTime = DateTime.Now;
             if(fetchedSettingsObj.Time == 0)
             {
-                fetchedSettingsObj.Time = 24 * 60 * 10;
+                fetchedSettingsObj.Time = 24 * 60 * 365;
             }
 
             
