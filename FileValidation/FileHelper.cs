@@ -26,8 +26,16 @@ namespace N3PS.File.Validatation.FileValidation
             {
                 fetchedSettingsObj.Percentage = 100;
             }
-            int totalCount = Convert.ToInt32((fetchedSettingsObj.Percentage / 100) * allLines.Length);
-            
+            decimal totalCountDec = Convert.ToDecimal((fetchedSettingsObj.Percentage / 100) * allLines.Length);
+            logger.Info($"Total Count as per Percentage : {totalCountDec.ToString("#.00")}");
+            int totalCount = Convert.ToInt32(totalCountDec);
+            if((totalCount * 1.0M) < totalCountDec)
+            {
+                
+                totalCount++;
+                logger.Info($"Total Count as per Percentage after converting to Integer : {totalCount}");
+            }
+
 
 
             ProcessedDetails processedDetails = new ProcessedDetails();
