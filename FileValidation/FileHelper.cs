@@ -127,7 +127,7 @@ namespace N3PS.File.Validatation.FileValidation
                        }
 
                        if (allCompleted)
-                           loopState.Break();
+                           loopState.Stop();
                         //logger.Info($"Random Line Number : {randomLineNumber + 1}");
                         string randomLineContent = allLines[randomLineNumber];
 
@@ -274,7 +274,7 @@ namespace N3PS.File.Validatation.FileValidation
                        {
 
                            logger.Info($"As per settings ended the program at End Time {endTime}");
-                           loopState.Break();
+                           loopState.Stop();
                        }
                    }
                    catch
