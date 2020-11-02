@@ -2,7 +2,7 @@
 <FlatFileFormat>
   <HeaderExist>No</HeaderExist>
   <RecordSize>170</RecordSize>
-  <FlatFilePath>C:\Users\vishal.chilka\Desktop\ZSB120OM_02Nov2020.OUT</FlatFilePath>
+  <FlatFilePath>C:\Users\vishal.chilka\Desktop\ZSB120OM_02Nov2020_1.OUT.txt</FlatFilePath>
   <Fields>
     <Field Name="NRIC Number" ColumnNumber="1">
       <StartPos>1</StartPos>

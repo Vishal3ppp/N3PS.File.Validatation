@@ -183,8 +183,9 @@ namespace N3PS.File.Validatation
 
             //SQLiteHelper sqlLite = new SQLiteHelper();
             SQLiteConnection m_dbConnection = sqlManipulation.OpenDBConnection(DBName);
+            
 
-       
+
 
             if (fetchedSettingsObj.NewRun)
             {
