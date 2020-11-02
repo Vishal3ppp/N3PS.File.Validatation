@@ -100,7 +100,7 @@ namespace N3PS.File.Validatation.FileValidation
                 DataSet ds = new DataSet();
 
                 randomLineNumber = rmd.Next(allLines.Length - 1);
-                logger.Info($"Generated Line Number : {randomLineNumber + 1}");
+                //logger.Info($"Generated Line Number : {randomLineNumber + 1}");
                 ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber + 1, logger);
                 int loopIteration = 1;
                 bool allCompleted = false;
@@ -112,7 +112,7 @@ namespace N3PS.File.Validatation.FileValidation
                         randomLineNumber = 0;
                     }
                     ds = sqlManipulation.RetrieveRecord(connection, tableName, randomLineNumber + 1, logger);
-                    logger.Info($"Total Records with Flat File Line Number : {randomLineNumber + 1} and Total Returned Count : {ds.Tables[0].Rows.Count}");
+                    //logger.Info($"Total Records with Flat File Line Number : {randomLineNumber + 1} and Total Returned Count : {ds.Tables[0].Rows.Count}");
                     if (loopIteration > TotalRecords)
                     {
                         allCompleted = true;
@@ -123,7 +123,7 @@ namespace N3PS.File.Validatation.FileValidation
 
                 if (allCompleted)
                     break;
-                logger.Info($"Random Line Number : {randomLineNumber + 1}");
+                //logger.Info($"Random Line Number : {randomLineNumber + 1}");
                 string randomLineContent = allLines[randomLineNumber];
 
                 //Check Validations
@@ -264,7 +264,7 @@ namespace N3PS.File.Validatation.FileValidation
 
                 sqlManipulation.InsertRecord(connection, tableName, randomLineNumber + 1, isError, logger);
 
-                if (startTime > endTime)
+                if (endTime < DateTime.Now)
                 {
 
                     logger.Info($"As per settings ended the program at End Time {endTime}");

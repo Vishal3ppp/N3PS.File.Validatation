@@ -201,6 +201,7 @@ namespace N3PS.File.Validatation
 
             logger.Info("------------------------------------------------------------");
             logger.Info($"Total Records: " + processedDetails.TotalRecords);
+            logger.Info($"Total Records Processed: " + (processedDetails.TotalErrorRecords + processedDetails.TotalSeccessfullyProcessedRecords));
             logger.Info($"Total Error Records: " + processedDetails.TotalErrorRecords);
             logger.Info($"Total Seccessfully Processed Records: " + processedDetails.TotalSeccessfullyProcessedRecords);
             logger.Info("------------------------------------------------------------");
