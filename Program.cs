@@ -27,6 +27,7 @@ namespace N3PS.File.Validatation
             int TimePart = 0;
             decimal PercentagePart = 0M;
             bool? RunSettingsPart = null;
+            bool? HDDCheckSettingsPart = null;
             if (args.Length > 0)
             {
                 if(args.Where(x => x.ToLower() == "-help").ToList().Count > 0)
@@ -35,7 +36,8 @@ namespace N3PS.File.Validatation
                     logger.Info("-t for Time setting in mins");
                     logger.Info("-p for Percentage setting");
                     logger.Info("-r for Run setting (True/False)");
-                    logger.Info("Example : >N3PS.File.Validatation.exe -t30 -p100 -rTrue");
+                    logger.Info("-h for HDD Check (True/False)");
+                    logger.Info("Example : >N3PS.File.Validatation.exe -t30 -p100 -rTrue -hFalse");
                     logger.Info("Meaning program will be running 30 mins, 100% random record picked up and New table to be created for processing or not.");
                     logger.Info("-----------------------------------------------------------------------------");
                     return 0;
@@ -62,6 +64,14 @@ namespace N3PS.File.Validatation
                     {
                         RunSettingsPart = Convert.ToBoolean(runSettingsPart[0].ToLower().Replace("-r", ""));
                         logger.Info($"RunSettingsPart Argument Value : {RunSettingsPart}");
+                    }
+
+
+                    var runHddCheckPart = args.Where(x => x.ToLower().Contains("-h")).ToList();
+                    if (runHddCheckPart.Count > 0)
+                    {
+                        HDDCheckSettingsPart = Convert.ToBoolean(runHddCheckPart[0].ToLower().Replace("-h", ""));
+                        logger.Info($"HDDCheckSettingsPart Argument Value : {HDDCheckSettingsPart}");
                     }
 
                 }
@@ -161,18 +171,30 @@ namespace N3PS.File.Validatation
                 }
             }
             //6. HDD Size Check
-            HDDCheck check = new HDDCheck();
-            bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath, logger);
+           
 
 
 
-            
-            
+
+            if (HDDCheckSettingsPart == null)
+                HDDCheckSettingsPart = true;
             //Check for free space
-            if (!isFreeSpaceAvailable)
+            if (HDDCheckSettingsPart.Value)
             {
-                return 0;
+                HDDCheck check = new HDDCheck();
+                bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath, logger);
+
+                if (!isFreeSpaceAvailable)
+                {
+                    return 0;
+                }
             }
+            else
+            {
+                logger.Info("HDD Check is Skipped.");
+            }
+            
+          
             string DBName = "ICA";
             SQLiteHelper sqlManipulation = new SQLiteHelper();
             bool isDBExist = sqlManipulation.IsDBExist(DBName);
@@ -199,7 +221,7 @@ namespace N3PS.File.Validatation
             FileHelper helper = new FileHelper();
             ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, dsTotalRecords, logger);
 
-
+            
             logger.Info("------------------------------------------------------------");
             logger.Info($"Total Records: " + processedDetails.TotalRecords);
             logger.Info($"Total Records Processed: " + (processedDetails.TotalErrorRecords + processedDetails.TotalSeccessfullyProcessedRecords));
