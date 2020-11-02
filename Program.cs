@@ -221,12 +221,39 @@ namespace N3PS.File.Validatation
             FileHelper helper = new FileHelper();
             ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, dsTotalRecords, logger);
 
-            
+            DataSet dsTotalRecords1 = sqlManipulation.GetTotalRecords(m_dbConnection, tableName, logger);
+            int totalRecords = 0;
+            int totalError = 0;
+            int totalSuccessProcessed = 0;
+            if (dsTotalRecords1 != null)
+            {
+                DataTable dt = dsTotalRecords1.Tables[0];
+                foreach(DataRow dr in dt.Rows)
+                {
+                    int tr = 0;
+                    if(dr["TotalRecords"] != DBNull.Value)
+                    {
+                        tr = Convert.ToInt32(dr["TotalRecords"].ToString());
+                        if (dr["IsError"] != DBNull.Value && Convert.ToBoolean(dr["IsError"].ToString()))
+                        {
+                            totalError = totalError + tr;
+                        }
+                        else
+                        {
+
+                            totalSuccessProcessed = totalSuccessProcessed + tr;
+
+                        }
+                        
+                        totalRecords = totalRecords + tr;
+                    }
+                }
+            }
             logger.Info("------------------------------------------------------------");
             logger.Info($"Total Records: " + processedDetails.TotalRecords);
-            logger.Info($"Total Records Processed: " + (processedDetails.TotalErrorRecords + processedDetails.TotalSeccessfullyProcessedRecords));
-            logger.Info($"Total Error Records: " + processedDetails.TotalErrorRecords);
-            logger.Info($"Total Seccessfully Processed Records: " + processedDetails.TotalSeccessfullyProcessedRecords);
+            logger.Info($"Total Records Processed: " + totalRecords);//(processedDetails.TotalErrorRecords + processedDetails.TotalSeccessfullyProcessedRecords));
+            logger.Info($"Total Error Records: " + totalError);// processedDetails.TotalErrorRecords);
+            logger.Info($"Total Seccessfully Processed Records: " + totalSuccessProcessed);// processedDetails.TotalSeccessfullyProcessedRecords);
             logger.Info("------------------------------------------------------------");
             sqlManipulation.CloseDBConnection(m_dbConnection);
 
