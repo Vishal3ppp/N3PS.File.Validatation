@@ -156,7 +156,8 @@ namespace N3PS.File.Validatation.XMLConfigClasses
 
 
                 }
-            }catch(Exception excp)
+            }
+            catch (Exception excp)
             {
                 logger.Error("Error in parsing the Flat File XML : " + excp.ToString() + " --- " + excp.StackTrace);
                 flatFile = null;
@@ -171,7 +172,7 @@ namespace N3PS.File.Validatation.XMLConfigClasses
             tableCreateScript.AppendLine($"Create Table {tableName}");
             tableCreateScript.AppendLine("(");
 
-           // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
+            // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
             tableCreateScript.AppendLine("FlatFileRowNumber INT,");
             tableCreateScript.AppendLine("IsError bool");
             tableCreateScript.AppendLine(")");
@@ -179,5 +180,9 @@ namespace N3PS.File.Validatation.XMLConfigClasses
             return tableCreateScript.ToString();
 
         }
+
+
+       
+
     }
 }
