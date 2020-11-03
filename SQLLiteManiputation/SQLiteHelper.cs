@@ -8,7 +8,7 @@ using System.IO;
 using NLog;
 using System.Data;
 
-namespace N3PS.File.Validatation.SQLLiteManiputation
+namespace N3PS.File.Compare.SQLLiteManiputation
 {
     class SQLiteHelper
     {
@@ -136,6 +136,100 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
             return isRecordInserted;
         }
 
+        public int GetTotalRecordsInTable(SQLiteConnection m_dbConnection, string tableName, Logger logger)
+        {
+            int records = 0;// new DataSet();
+
+            try
+            {
+                string query = $"SELECT count(1) TotalRecords FROM {tableName};";
+
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
+
+                SQLiteDataAdapter myAdapter = new SQLiteDataAdapter(query, m_dbConnection);
+                //myAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                DataSet myDataSet = new DataSet();
+                myAdapter.Fill(myDataSet, "Records");
+
+                if (myDataSet.Tables[0].Rows.Count > 0)
+                {
+                    records = Convert.ToInt32(myDataSet.Tables[0].Rows[0][0].ToString());
+                }
+                //m_dbConnection.Close();
+
+
+
+
+            }
+            catch (Exception excp)
+            {
+                logger.Error("Error while retrieving from sql lite Table : " + excp.ToString() + " --- " + excp.StackTrace);
+            }
+
+            return records;
+        }
+
+
+        
+
+        public DataSet CheckTableExists(SQLiteConnection m_dbConnection, string tableName, Logger logger)
+        {
+            DataSet myDataSet = new DataSet();
+
+            try
+            {
+                string query = $"SELECT name FROM sqlite_master WHERE type='table' AND name='{tableName}';";
+
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
+
+                SQLiteDataAdapter myAdapter = new SQLiteDataAdapter(query, m_dbConnection);
+                //myAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+
+                myAdapter.Fill(myDataSet, "Records");
+
+
+                //m_dbConnection.Close();
+
+
+
+
+            }
+            catch (Exception excp)
+            {
+                logger.Error("Error while retrieving from sql lite Table : " + excp.ToString() + " --- " + excp.StackTrace);
+            }
+
+            return myDataSet;
+        }
+
+        public bool InsertRecord(SQLiteConnection m_dbConnection, string query, Logger logger)
+        {
+            bool isRecordInserted = false;
+            try
+            {
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
+                //string isErrorString = IsError ? "1" : "0";
+                //string query = $"INSERT INTO {tableName}(FlatFileRowNumber, IsError) VALUES({flatFileRecordNumber},{isErrorString})";
+
+                SQLiteCommand command = new SQLiteCommand(query, m_dbConnection);
+                command.ExecuteNonQuery();
+
+
+
+                //m_dbConnection.Close();
+                isRecordInserted = true;
+            }
+            catch (Exception excp)
+            {
+                logger.Error("Error while inserting sql lite Table : " + excp.ToString() + " --- " + excp.StackTrace);
+            }
+
+            return isRecordInserted;
+        }
+
         public DataSet GetTotalRecords(SQLiteConnection m_dbConnection, string tableName, Logger logger)
         {
             DataSet myDataSet = new DataSet();
@@ -170,6 +264,39 @@ namespace N3PS.File.Validatation.SQLLiteManiputation
 
             return myDataSet;
         }
+
+
+        public DataSet RetrieveRecord(SQLiteConnection m_dbConnection, string query, Logger logger)
+        {
+            DataSet myDataSet = new DataSet();
+
+            try
+            {
+                //string query = $"SELECT FlatFileRowNumber FROM {tableName} WHERE FlatFileRowNumber =  {flatFileRecordNumber}";
+
+                //SQLiteConnection m_dbConnection = new SQLiteConnection($"Data Source={DBName}.sqlite;Version=3;");
+                //m_dbConnection.Open();
+
+                SQLiteDataAdapter myAdapter = new SQLiteDataAdapter(query, m_dbConnection);
+                //myAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+
+                myAdapter.Fill(myDataSet, "Records");
+
+
+                //m_dbConnection.Close();
+
+
+
+
+            }
+            catch (Exception excp)
+            {
+                logger.Error("Error while retrieving from sql lite Table : " + excp.ToString() + " --- " + excp.StackTrace);
+            }
+
+            return myDataSet;
+        }
+
 
         public DataSet RetrieveRecord(SQLiteConnection m_dbConnection, string tableName, int flatFileRecordNumber, Logger logger)
         {

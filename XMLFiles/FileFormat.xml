@@ -2,9 +2,13 @@
 <FlatFileFormat>
   <HeaderExist>No</HeaderExist>
   <RecordSize>170</RecordSize>
-  <FlatFilePath>D:\SP.Phase_1\Source Code\SP-ICRMS-Phase2\N3PS.File.Validatation\FlatFile\ZSB120OM.OUT</FlatFilePath>
+  <PrimaryKeyColumnNumber>1</PrimaryKeyColumnNumber>
+  <FlatFiles>
+    <FlatFilePath1>C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT</FlatFilePath1>
+    <FlatFilePath2>C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT</FlatFilePath2>
+  </FlatFiles>
   <Fields>
-    <Field Name="NRIC Number" ColumnNumber="1">
+    <Field Name="NRICNumber" ColumnNumber="1">
       <StartPos>1</StartPos>
       <Length>9</Length>
     </Field>
@@ -19,29 +23,29 @@
       <Length>1</Length>
     </Field>
     
-    <Field Name="MHA_Block No" ColumnNumber="4">
+    <Field Name="MHA_BlockNo" ColumnNumber="4">
       <StartPos>77</StartPos>
       <Length>5</Length>
     </Field>
     
-    <Field Name="MHA_Street Name" ColumnNumber="5">
+    <Field Name="MHA_StreetName" ColumnNumber="5">
       <StartPos>82</StartPos>
       <Length>32</Length>
     </Field>
 
 
-    <Field Name="MHA _Floor No" ColumnNumber="6">
+    <Field Name="MHA_FloorNo" ColumnNumber="6">
       <StartPos>114</StartPos>
       <Length>2</Length>
     </Field>
 
 
-    <Field Name="MHA _Unit No" ColumnNumber="7">
+    <Field Name="MHA_UnitNo" ColumnNumber="7">
       <StartPos>116</StartPos>
       <Length>5</Length>
     </Field>
 
-    <Field Name="MHA_Building Name" ColumnNumber="8">
+    <Field Name="MHA_BuildingName" ColumnNumber="8">
       <StartPos>121</StartPos>
       <Length>30</Length>
     </Field>
@@ -53,13 +57,13 @@
     </Field>
 
 
-    <Field Name="Invalid address tag" ColumnNumber="10">
+    <Field Name="InvalidAddressTag" ColumnNumber="10">
       <StartPos>157</StartPos>
       <Length>1</Length>
     </Field>
 
 
-    <Field Name="Residential Status" ColumnNumber="11">
+    <Field Name="ResidentialStatus" ColumnNumber="11">
       <StartPos>158</StartPos>
       <Length>1</Length>
     </Field>
@@ -71,13 +75,13 @@
     </Field>
 
 
-    <Field Name="Date of Birth" ColumnNumber="13">
+    <Field Name="DateofBirth" ColumnNumber="13">
       <StartPos>160</StartPos>
       <Length>8</Length>
     </Field>
 
 
-    <Field Name="Ethnic Group" ColumnNumber="14">
+    <Field Name="EthnicGroup" ColumnNumber="14">
       <StartPos>168</StartPos>
       <Length>1</Length>
     </Field>

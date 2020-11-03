@@ -1,8 +1,8 @@
-﻿using N3PS.File.Validatation.BusinessLogic;
-using N3PS.File.Validatation.DiskManipulation;
-using N3PS.File.Validatation.FileValidation;
-using N3PS.File.Validatation.SQLLiteManiputation;
-using N3PS.File.Validatation.XMLConfigClasses;
+﻿using N3PS.File.Compare.BusinessLogic;
+using N3PS.File.Compare.DiskManipulation;
+using N3PS.File.Compare;
+using N3PS.File.Compare.SQLLiteManiputation;
+using N3PS.File.Compare.XMLConfigClasses;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace N3PS.File.Validatation
+namespace N3PS.File.Comapre
 {
     class Program
     {
@@ -37,7 +37,7 @@ namespace N3PS.File.Validatation
                     logger.Info("-p for Percentage setting");
                     logger.Info("-r for Run setting (True/False)");
                     logger.Info("-h for HDD Check (True/False)");
-                    logger.Info("Example : >N3PS.File.Validatation.exe -t30 -p100 -rTrue -hFalse");
+                    logger.Info("Example : >N3PS.File.Compare.exe  -hFalse");
                     logger.Info("Meaning program will be running 30 mins, 100% random record picked up and New table to be created for processing or not.");
                     logger.Info("-----------------------------------------------------------------------------");
                     return 0;
@@ -85,12 +85,11 @@ namespace N3PS.File.Validatation
 
             string SettingsXmlName = @".\XMLFiles\Settings.xml";
 
-            string ValidationRuleXmlName = @".\XMLFiles\ValidationRule.xml";
+            //string ValidationRuleXmlName = @".\XMLFiles\ValidationRule.xml";
 
             //3. Convert FlatFile to C# objects
             FlatFile flatFile = new FlatFile();
-            string tableName = "ICADetails";
-            string CreateTableSQLQuery = flatFile.CreateFlatFileTableScript(tableName);
+            
             FlatFile fetchedFlatFileObj = flatFile.GetInstance(FlatFileXmlName, logger);
 
             if (fetchedFlatFileObj == null)
@@ -99,35 +98,35 @@ namespace N3PS.File.Validatation
                 return 0;
             }
 
-            
-                //4. Convert Settings File to C# objects
+
+            //4.Convert Settings File to C# objects
                 SettingsFile settingsFile = new SettingsFile();
             SettingsFile fetchedSettingsObj = settingsFile.GetInstance(SettingsXmlName, logger);
 
-            if (fetchedSettingsObj == null)
-            {
-                logger.Error($"Error while loading the Settings File XML : {SettingsXmlName}");
-                return 0;
-            }
+             if (fetchedSettingsObj == null)
+             {
+                 logger.Error($"Error while loading the Settings File XML : {SettingsXmlName}");
+                 return 0;
+             }
 
-            if (TimePart != 0)
-            {
-                logger.Info($"Overidden Time Part from Settings.xml: {TimePart}");
-                fetchedSettingsObj.Time = TimePart;
-            }
+             if (TimePart != 0)
+             {
+                 logger.Info($"Overidden Time Part from Settings.xml: {TimePart}");
+                 fetchedSettingsObj.Time = TimePart;
+             }
 
-            if (PercentagePart != 0M)
-            {
-                logger.Info($"Overidden Percentage from Settings.xml: {PercentagePart}");
-                fetchedSettingsObj.Percentage = PercentagePart;
-            }
+             if (PercentagePart != 0M)
+             {
+                 logger.Info($"Overidden Percentage from Settings.xml: {PercentagePart}");
+                 fetchedSettingsObj.Percentage = PercentagePart;
+             }
 
 
-            if (RunSettingsPart != null)
-            {
-                logger.Info($"Overidden Run Settings from Settings.xml: {RunSettingsPart}");
-                fetchedSettingsObj.NewRun = RunSettingsPart.Value;
-            }
+             if (RunSettingsPart != null)
+             {
+                 logger.Info($"Overidden Run Settings from Settings.xml: {RunSettingsPart}");
+                 fetchedSettingsObj.NewRun = RunSettingsPart.Value;
+             }
 
 
             logger.Info("Settings : Start ----------------------");
@@ -137,41 +136,41 @@ namespace N3PS.File.Validatation
 
             logger.Info("Settings : END ----------------------");
 
-            //5. Convert ValidationRule to C# objects
-            ValidationRuleFile validationRuleFile = new ValidationRuleFile();
-            ValidationRuleFile fetchedValidationRuleObj = validationRuleFile.GetInstance(ValidationRuleXmlName, logger);
+            ////5. Convert ValidationRule to C# objects
+            //ValidationRuleFile validationRuleFile = new ValidationRuleFile();
+            //ValidationRuleFile fetchedValidationRuleObj = validationRuleFile.GetInstance(ValidationRuleXmlName, logger);
 
-            if (fetchedValidationRuleObj == null)
-            {
-                logger.Error($"Error while loading the Validation Rule File XML : {ValidationRuleXmlName}");
-                return 0;
-            }
+            //if (fetchedValidationRuleObj == null)
+            //{
+            //    logger.Error($"Error while loading the Validation Rule File XML : {ValidationRuleXmlName}");
+            //    return 0;
+            //}
 
 
-            var dllsDetails = fetchedValidationRuleObj.ValidationRules.Where(x => x.DLLInfo != null && !string.IsNullOrEmpty(x.DLLInfo.DLLName) ).ToList();
+            //var dllsDetails = fetchedValidationRuleObj.ValidationRules.Where(x => x.DLLInfo != null && !string.IsNullOrEmpty(x.DLLInfo.DLLName) ).ToList();
 
-            Hashtable assemblyDetails = new Hashtable();
+            //Hashtable assemblyDetails = new Hashtable();
 
-            if (dllsDetails.Count() > 0)
-            {
-                foreach (ValidationsRule rule in dllsDetails)
-                {
-                    FileInfo f = new FileInfo(@".\ExternalDLLs\" + rule.DLLInfo.DLLName);
-                    logger.Info($"Full File Name : {f.FullName}");
-                    if (!System.IO.File.Exists(f.FullName))
-                    {
-                        logger.Error($"External DLL is not exist {rule.DLLInfo.DLLName} in ExternalDLLs folder.");
-                        return 0;
-                    }
-                    else
-                    {
-                        Assembly assembly = Assembly.LoadFile(f.FullName);
-                        assemblyDetails.Add(rule.ColumnNumber, assembly);
-                    }
-                }
-            }
+            //if (dllsDetails.Count() > 0)
+            //{
+            //    foreach (ValidationsRule rule in dllsDetails)
+            //    {
+            //        FileInfo f = new FileInfo(@".\ExternalDLLs\" + rule.DLLInfo.DLLName);
+            //        logger.Info($"Full File Name : {f.FullName}");
+            //        if (!System.IO.File.Exists(f.FullName))
+            //        {
+            //            logger.Error($"External DLL is not exist {rule.DLLInfo.DLLName} in ExternalDLLs folder.");
+            //            return 0;
+            //        }
+            //        else
+            //        {
+            //            Assembly assembly = Assembly.LoadFile(f.FullName);
+            //            assemblyDetails.Add(rule.ColumnNumber, assembly);
+            //        }
+            //    }
+            //}
             //6. HDD Size Check
-           
+
 
 
 
@@ -182,7 +181,7 @@ namespace N3PS.File.Validatation
             if (HDDCheckSettingsPart.Value)
             {
                 HDDCheck check = new HDDCheck();
-                bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath, logger);
+                bool isFreeSpaceAvailable = check.IsEnoughSpaceAvailable(fetchedFlatFileObj.FlatFilePath1, logger);
 
                 if (!isFreeSpaceAvailable)
                 {
@@ -193,8 +192,8 @@ namespace N3PS.File.Validatation
             {
                 logger.Info("HDD Check is Skipped.");
             }
-            
-          
+
+            //logger.Info($"Flat file Path : {fetchedFlatFileObj.FlatFilePath}");
             string DBName = "ICA";
             SQLiteHelper sqlManipulation = new SQLiteHelper();
             bool isDBExist = sqlManipulation.IsDBExist(DBName);
@@ -205,19 +204,116 @@ namespace N3PS.File.Validatation
 
             //SQLiteHelper sqlLite = new SQLiteHelper();
             SQLiteConnection m_dbConnection = sqlManipulation.OpenDBConnection(DBName);
-            
 
 
+
+            string tableName1 = "ICATable1";
+            string tableName2 = "ICATable2";
+
+
+            string tableNameDeleted1 = "ICADeletedTable1";
+            string tableNameInserted2 = "ICAInsertedTable2";
+
+            string CreateDeletedTableSQLQuery1 = flatFile.GetFlatFileDeletedTableScript(tableNameDeleted1, fetchedFlatFileObj);
+            string CreateInsertedTableSQLQuery2 = flatFile.GetFlatFileInsertTableScript(tableNameInserted2, fetchedFlatFileObj);
+
+
+            string processedtableName1 = "ProcessedICATable1";
+            string processedtableName2 = "ProcessedICATable2";
 
             if (fetchedSettingsObj.NewRun)
             {
-                 
-                sqlManipulation.DeleteTable(DBName, tableName, logger);
-                sqlManipulation.CreateTable(DBName, CreateTableSQLQuery, logger);
+                
+                string CreateTableSQLQuery1 = flatFile.GetFlatFileTableScript(tableName1, fetchedFlatFileObj);
+                string CreateTableSQLQuery2 = flatFile.GetFlatFileTableScript(tableName2, fetchedFlatFileObj);
+
+
+                string CreateProcessedTableSQLQuery1 = flatFile.CreateFlatFileTableScript(processedtableName1);
+                string CreateProcessedTableSQLQuery2 = flatFile.CreateFlatFileTableScript(processedtableName2);
+
+                DataSet ds = sqlManipulation.CheckTableExists(m_dbConnection, tableName1, logger);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sqlManipulation.DeleteTable(DBName, tableName1, logger);
+                   
+                }
+
+                sqlManipulation.CreateTable(DBName, CreateTableSQLQuery1, logger);
+
+                ds = sqlManipulation.CheckTableExists(m_dbConnection, tableName2, logger);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sqlManipulation.DeleteTable(DBName, tableName2, logger);
+                    
+                }
+                sqlManipulation.CreateTable(DBName, CreateTableSQLQuery2, logger);
+                //sqlManipulation.DeleteTable(DBName, processedtableName1, logger);
+                //sqlManipulation.DeleteTable(DBName, processedtableName2, logger);
+
+                //sqlManipulation.CreateTable(DBName, CreateTableSQLQuery1, logger);
+                //sqlManipulation.CreateTable(DBName, CreateTableSQLQuery2, logger);
+                ds = sqlManipulation.CheckTableExists(m_dbConnection, processedtableName1, logger);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sqlManipulation.DeleteTable(DBName, processedtableName1, logger);
+                    
+                }
+                sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery1, logger);
+
+                ds = sqlManipulation.CheckTableExists(m_dbConnection, processedtableName2, logger);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sqlManipulation.DeleteTable(DBName, processedtableName2, logger);
+               
+                }
+
+                sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery2, logger);
+
+
+
+                ds = sqlManipulation.CheckTableExists(m_dbConnection, tableNameDeleted1, logger);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sqlManipulation.DeleteTable(DBName, tableNameDeleted1, logger);
+
+                }
+
+                sqlManipulation.CreateTable(DBName, CreateDeletedTableSQLQuery1, logger);
+
+
+                ds = sqlManipulation.CheckTableExists(m_dbConnection, tableNameInserted2, logger);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sqlManipulation.DeleteTable(DBName, tableNameInserted2, logger);
+
+                }
+
+                sqlManipulation.CreateTable(DBName, CreateInsertedTableSQLQuery2, logger);
+
+                //sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery1, logger);
+                //sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery2, logger);
                 //sqlManipulation.CloseDBConnection(m_dbConnection);
 
             }
-            DataSet dsTotalRecords = sqlManipulation.GetTotalRecords(m_dbConnection, tableName, logger);
+            FileHelper helper = new FileHelper();
+            helper.InsertInto(sqlManipulation, fetchedFlatFileObj, fetchedSettingsObj, m_dbConnection, DBName, tableName1, processedtableName1, fetchedFlatFileObj.FlatFilePath1, logger);
+
+            helper.InsertInto(sqlManipulation, fetchedFlatFileObj, fetchedSettingsObj, m_dbConnection, DBName, tableName2, processedtableName2, fetchedFlatFileObj.FlatFilePath2, logger);
+
+
+            int table1Records = sqlManipulation.GetTotalRecordsInTable(m_dbConnection, tableName1, logger);
+
+
+            int table2Records = sqlManipulation.GetTotalRecordsInTable(m_dbConnection, tableName2, logger);
+            DataSet dsTotalRecords1 = sqlManipulation.GetTotalRecords(m_dbConnection, processedtableName1, logger);
+            helper.Compare(fetchedFlatFileObj, fetchedSettingsObj,  sqlManipulation, m_dbConnection, DBName, tableName1, tableName2, processedtableName1, processedtableName2, tableNameDeleted1, tableNameInserted2, table1Records, dsTotalRecords1, logger);
+            /*DataSet dsTotalRecords = sqlManipulation.GetTotalRecords(m_dbConnection, tableName, logger);
             FileHelper helper = new FileHelper();
             ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, dsTotalRecords, logger);
 
@@ -253,7 +349,7 @@ namespace N3PS.File.Validatation
             logger.Info($"Total Records: " + processedDetails.TotalRecords);
             logger.Info($"Total Records Processed: " + totalRecords);//(processedDetails.TotalErrorRecords + processedDetails.TotalSeccessfullyProcessedRecords));
             logger.Info($"Total Error Records: " + totalError);// processedDetails.TotalErrorRecords);
-            logger.Info($"Total Seccessfully Processed Records: " + totalSuccessProcessed);// processedDetails.TotalSeccessfullyProcessedRecords);
+            logger.Info($"Total Successfully Processed Records: " + totalSuccessProcessed);// processedDetails.TotalSeccessfullyProcessedRecords);
             logger.Info("------------------------------------------------------------");
             sqlManipulation.CloseDBConnection(m_dbConnection);
 
@@ -263,6 +359,8 @@ namespace N3PS.File.Validatation
             //FileHelper f = new FileHelper();
             //f.ValidateFile(@"C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT");
 
+            return 0;*/
+            sqlManipulation.CloseDBConnection(m_dbConnection);
             return 0;
         }
     }

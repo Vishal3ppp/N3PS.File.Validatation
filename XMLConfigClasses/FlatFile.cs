@@ -1,4 +1,4 @@
-﻿using N3PS.File.Validatation.BusinessLogic;
+﻿using N3PS.File.Compare.BusinessLogic;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace N3PS.File.Validatation.XMLConfigClasses
+namespace N3PS.File.Compare.XMLConfigClasses
 {
     class FlatFile
     {
@@ -17,8 +17,11 @@ namespace N3PS.File.Validatation.XMLConfigClasses
 
         public int RecordSize { get; set; }
 
-        public string FlatFilePath { get; set; }
+        public string FlatFilePath1 { get; set; }
 
+        public string FlatFilePath2 { get; set; }
+
+        public int PrimaryKeyColumnNumber { get; set; }
         /// <summary>
         /// Get instance of FlatFile
         /// </summary>
@@ -52,6 +55,20 @@ namespace N3PS.File.Validatation.XMLConfigClasses
                     flatFile.HeaderExist = false;
                 }
 
+
+                logger.Info("Retrieving the PrimaryKeyColumnNumber element.");
+                XmlNode primaryKeyColumnNumberNode = xmlDoc.SelectSingleNode("//FlatFileFormat/PrimaryKeyColumnNumber");
+                if (primaryKeyColumnNumberNode != null)
+                {
+                    logger.Info("PrimaryKeyColumnNumber element is exist.");
+                    flatFile.PrimaryKeyColumnNumber = Convert.ToInt32(primaryKeyColumnNumberNode.InnerText.Trim());
+                }
+                else
+                {
+                    logger.Info("PrimaryKeyColumnNumber element is not exist.");
+                    flatFile.PrimaryKeyColumnNumber = 1;
+                }
+
                 logger.Info("Retrieving the RecordSize element.");
                 XmlNode recordSizeNode = xmlDoc.SelectSingleNode("//FlatFileFormat/RecordSize");
                 if (recordSizeNode != null)
@@ -69,18 +86,36 @@ namespace N3PS.File.Validatation.XMLConfigClasses
 
 
 
-                logger.Info("Retrieving the FlatFile element.");
-                XmlNode flatFilePathNode = xmlDoc.SelectSingleNode("//FlatFileFormat/FlatFilePath");
-                if (flatFilePathNode != null)
+                logger.Info("Retrieving the FlatFile 1 element.");
+                XmlNode flatFilePathNode1 = xmlDoc.SelectSingleNode("//FlatFileFormat/FlatFiles/FlatFilePath1");
+                if (flatFilePathNode1 != null)
                 {
-                    logger.Info("FlatFile element is exist.");
-                    flatFile.FlatFilePath = flatFilePathNode.InnerText.Trim();
+                    logger.Info("FlatFile 1 element is exist.");
+                    flatFile.FlatFilePath1 = flatFilePathNode1.InnerText.Trim();
                 }
                 else
                 {
-                    logger.Info("FlatFile element is not exist.");
-                    flatFile.FlatFilePath = string.Empty;
+                    logger.Info("FlatFile 1 element is not exist.");
+                    flatFile.FlatFilePath1 = string.Empty;
                 }
+
+
+                logger.Info("Retrieving the FlatFile 2 element.");
+                XmlNode flatFilePathNode2 = xmlDoc.SelectSingleNode("//FlatFileFormat/FlatFiles/FlatFilePath2");
+                if (flatFilePathNode2 != null)
+                {
+                    logger.Info("FlatFile 2 element is exist.");
+                    flatFile.FlatFilePath2 = flatFilePathNode2.InnerText.Trim();
+                }
+                else
+                {
+                    logger.Info("FlatFile 2 element is not exist.");
+                    flatFile.FlatFilePath2 = string.Empty;
+                }
+
+
+
+
                 //flatFile.FlatFilePath = xmlPath;
 
 
@@ -174,6 +209,78 @@ namespace N3PS.File.Validatation.XMLConfigClasses
            // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
             tableCreateScript.AppendLine("FlatFileRowNumber INT,");
             tableCreateScript.AppendLine("IsError bool");
+            tableCreateScript.AppendLine(")");
+
+            return tableCreateScript.ToString();
+
+        }
+
+        public string GetFlatFileTableScript(string tableName, FlatFile fetchedFlatFileDetails)
+        {
+
+            StringBuilder tableCreateScript = new StringBuilder();
+            tableCreateScript.AppendLine($"Create Table {tableName}");
+            tableCreateScript.AppendLine("(");
+
+            tableCreateScript.AppendLine("FlatFileRowNumber INT,");
+            foreach (Fields field in fetchedFlatFileDetails.fields)
+            {
+                // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
+
+                tableCreateScript.AppendLine($"{field.FieldName} VARCHAR({field.Length}),");
+
+            }
+            tableCreateScript.AppendLine($"HashingKey NVARCHAR(4000)");
+            //tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
+            tableCreateScript.AppendLine(")");
+
+            return tableCreateScript.ToString();
+
+        }
+
+
+
+        public string GetFlatFileDeletedTableScript(string tableName, FlatFile fetchedFlatFileDetails)
+        {
+
+            StringBuilder tableCreateScript = new StringBuilder();
+            tableCreateScript.AppendLine($"Create Table {tableName}");
+            tableCreateScript.AppendLine("(");
+
+            tableCreateScript.AppendLine("FlatFileRowNumber INT,");
+            foreach (Fields field in fetchedFlatFileDetails.fields)
+            {
+                // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
+
+                tableCreateScript.AppendLine($"{field.FieldName} VARCHAR({field.Length}),");
+
+            }
+            
+            tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
+            tableCreateScript.AppendLine(")");
+
+            return tableCreateScript.ToString();
+
+        }
+
+
+        public string GetFlatFileInsertTableScript(string tableName, FlatFile fetchedFlatFileDetails)
+        {
+
+            StringBuilder tableCreateScript = new StringBuilder();
+            tableCreateScript.AppendLine($"Create Table {tableName}");
+            tableCreateScript.AppendLine("(");
+
+            tableCreateScript.AppendLine("FlatFileRowNumber INT,");
+            foreach (Fields field in fetchedFlatFileDetails.fields)
+            {
+                // tableCreateScript.AppendLine("RowNumber INT IDENTITY,");
+
+                tableCreateScript.AppendLine($"{field.FieldName} VARCHAR({field.Length}),");
+
+            }
+
+            tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
             tableCreateScript.AppendLine(")");
 
             return tableCreateScript.ToString();

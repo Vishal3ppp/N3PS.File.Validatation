@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N3PS.File.Validatation.DiskManipulation
+namespace N3PS.File.Compare.DiskManipulation
 {
     class HDDCheck
     {
@@ -32,7 +32,7 @@ namespace N3PS.File.Validatation.DiskManipulation
                 FileInfo flatFileInfo = new FileInfo(flatFilePath);
 
 
-                if (currentDrive.TotalFreeSpace > (flatFileInfo.Length * 2))
+                if (currentDrive.TotalFreeSpace > (flatFileInfo.Length * 4))
                 {
                     logger.Info("There is free available space.");
                     isFreeSpaceAvailable = true;
