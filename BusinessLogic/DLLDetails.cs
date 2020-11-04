@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N3PS.File.Validatation.BusinessLogic
+namespace N3PS.File.Compare.BusinessLogic
 {
     class DLLDetails
     {

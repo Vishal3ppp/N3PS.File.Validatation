@@ -1,4 +1,4 @@
-﻿using N3PS.File.Validatation.BusinessLogic;
+﻿using N3PS.File.Compare.BusinessLogic;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace N3PS.File.Validatation.XMLConfigClasses
+namespace N3PS.File.Compare.XMLConfigClasses
 {
     class ValidationRuleFile
     {

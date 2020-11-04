@@ -1,4 +1,4 @@
-﻿using N3PS.File.Validatation.SQLLiteManiputation;
+﻿using N3PS.File.Compare.SQLLiteManiputation;
 using NLog;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace N3PS.File.Validatation.XMLConfigClasses
+namespace N3PS.File.Compare.XMLConfigClasses
 {
     class SettingsFile
     {

@@ -6,7 +6,7 @@ Only one validation settings to be specified
 -->
 <Settings>
   <RunSettings>
-    <NewRun>False</NewRun>
+    <NewRun>True</NewRun>
   </RunSettings>
   <ValidationSetting>
     <Percentage>50</Percentage>
