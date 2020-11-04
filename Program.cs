@@ -253,7 +253,7 @@ namespace N3PS.File.Validatation
             logger.Info($"Total Records: " + processedDetails.TotalRecords);
             logger.Info($"Total Records Processed: " + totalRecords);//(processedDetails.TotalErrorRecords + processedDetails.TotalSeccessfullyProcessedRecords));
             logger.Info($"Total Error Records: " + totalError);// processedDetails.TotalErrorRecords);
-            logger.Info($"Total Seccessfully Processed Records: " + totalSuccessProcessed);// processedDetails.TotalSeccessfullyProcessedRecords);
+            logger.Info($"Total Successfully Processed Records: " + totalSuccessProcessed);// processedDetails.TotalSeccessfullyProcessedRecords);
             logger.Info("------------------------------------------------------------");
             sqlManipulation.CloseDBConnection(m_dbConnection);
 
