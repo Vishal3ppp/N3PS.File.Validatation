@@ -1,0 +1,550 @@
+S0187544FSIAHAAN GEOK LAN ROSEMARY                                         A14A  LORONG 7 TOA PAYOH              16227                                311014NCM19510208MHK
+S0187860ESEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451207CSH
+S0190770BANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             04158                                560107NCF19400731CHK
+S0188525GLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 8 68                                 531003NCM19410320CTC
+S0187669DHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCM19390101CCT
+S0191533DLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 8 68                                 531003NCM19410320CTC
+S0189065DLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251229CHK
+S0189375DCHER THIAM HEE                                                    A223A COMPASSVALE WALK                07633                                541223NCF19241123CTC
+S0188105CLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0190525DLIM LIAN HO DIANA                                                 B131  STEVENS ROAD                                                         257869NCM19511208CHK
+S0187391APATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420223CTC
+S0187969ACHEW HWEE SIANG                                                   A268  BISHAN STREET 24                08170                                570268NCM19491218CTC
+S0188138AANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             04158                                560107NCF19400731CHK
+S0190890BCHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             06177                                510507NCM19490904CCT
+S0189691BYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  3 58                                 520147NCM19490909CCT
+S0191255ACHER THIAM HEE                                                    A223A COMPASSVALE WALK                07633                                541223NCF19241123CTC
+S0187424FKOH KIM WAH                                                       A28   BENDEMEER ROAD                  07687                                330028NCM19510107CFO
+S0191032CNEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251203CHK
+S0191817EKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330320CTC
+S0188367DSEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480305CHK
+S0187408DCHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                03553                                530676NCM19501130CCT
+S0188089ATAN SWEE LIAN VIOLET                                              A615  WOODLANDS AVENUE 4              09507                                730615NCM19510910CHK
+S0187691EVALERIE CHIA KAH SIANG                                            A319  SERANGOON AVENUE 2              5 346                                550319NCM19510222CTC
+S0188454GLIM BEE ING HELENA                                                A35   JALAN BAHAGIA                   4 232                                320035NCM19490205CFO
+S0191207BLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0190787ECHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0188629ECHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510427CTC
+S0189566DANG GEK SIM YVONNE                                                B60   NEWTON ROAD                     351                                  307994NCM19500812CHK
+S0189724GWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370712CCT
+S0188939EYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490908CCT
+S0187947GCHIA HANG KEE                                                     B2    PANDAN VALLEY                   09207                                597626NCF19451222CTC
+S0190912CTEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490126CHK
+S0190144DLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501127CCT
+S0190509BCHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510427CTC
+S0188852CCHOO MARY                                                         A171C EDGEDALE PLAINS                 06440                                823171NCM19481004CHK
+S0188492BMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0191746ELEE YOKE KUEN PATRICIA                                            A329  CLEMENTI AVENUE 2               09232                                120329NCM19500321CCT
+S0188138AANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             04158                                560107NCF19400731CHK
+S0189206DLIM BEE ING HELENA                                                A35   JALAN BAHAGIA                   04232                                320035NCM19490204CFO
+S0191468BLIM AGNES                                                         B16   PARBURY AVENUE                                                       467291NCM19510806CTC
+S0189032FTEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490126CHK
+S0191190FTAY LEE KWEE                                                      C5253 HIDDENCREST CT CONCORD,CA 94521                                            NCM19500807CTC
+S0191048EHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCF19450726CKK
+S0189866ALEE YOKE KUEN PATRICIA                                            A329  CLEMENTI AVENUE 2               09232                                120329NCM19500321CCT
+S0188225CPANG KWONG MUN                                                    A296  YISHUN STREET 20                1013                                 760296NCF19300224CCT
+S0189446DANG HIOK HOON                                                     A437  ANG MO KIO AVENUE 10            231369                               560437NCM19420418CTC
+S0191452GFOO SOON JONG PAULINE                                             B64C  OXLEY ROAD                                                           238649NCM19500430CHN
+S0188612BSEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451208CSH
+S0189986ALEONG SAU WUN CECILIA                                             A98   LORONG 1 TOA PAYOH              09291                                310098NCM19500615CCT
+S0188176DKOH KIM WAH                                                       A28   BENDEMEER ROAD                  07687                                330028NCM19510107CFO
+S0187226FLIM BEE ING HELENA                                                A35   JALAN BAHAGIA                   04232                                320035NCM19490204CFO
+S0191946GTEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490126CHK
+S0187968GANG GEK SIM YVONNE                                                B60   NEWTON ROAD                     3501                                 307994NCM19500811CHK
+S0191510BWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370712CCT
+S0191668ETAN LENA                                                          A71   MARINE DRIVE                    7 234                                440071NCM19490420CTC
+S0188431ELEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0188845CYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490908CCT
+S0190072BCHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510723CPI
+S0191658BONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491020CHK
+S0191532CABDUL RAHIM BIN AHMAD                                             A682A WOODLANDS DRIVE 62              2 93                                 731682NCM19471008MMY
+S0188993BTAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCF19430805CHK
+S0188971BLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251229CHK
+S0188567GANG GILIAN                                                        A140  BUKIT BATOK STREET 11           8 33                                 650140NCM19500917CHK
+S0187407CCHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510426CTC
+S0191303FONG SOH NEO                                                       A826  WOODLANDS STREET 81             0750                                 730826NCM19500619CHK
+S0190301FHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCF19381231CCT
+S0187210DCHEW HWEE SIANG                                                   A268  BISHAN STREET 24                08170                                570268NCM19491218CTC
+S0188692ECHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                90015 NCM19460720CCT
+S0190508ACHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                90114 NCM19490108CCT
+S0188289DCHUA POH NEO, ANGELA                                              B94   CORONATION ROAD                                                      269490NCM19510627CHK
+S0188828GLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501127CCT
+S0191047DHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0187074BWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370711CCT
+S0189587DKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500706CCT
+S0191843CKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500705CCT
+S0191930FLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501127CCT
+S0187128FKOH KIM WAH                                                       A28   BENDEMEER ROAD                  07687                                330028NCM19510107CFO
+S0189368DKHOO CHIN KOK ALLAN                                               A30   TELOK BLANGAG RISE              10324                                090030NCF19430904CHK
+S0190769AMAY CHIN SOON OI                                                  A8    CANTONMENT CLOSE                1787                                 081008NCM19370511CKK
+S0188230ALOO LEONG HONG                                                    A3    UPPER ALJUNIED LANE             0968                                 360003NCF19370703CHK
+S0189265FMAY CHIN SOON OI                                                  A8    CANTONMENT CLOSE                1787                                 081008NCM19370511CKK
+S0189232BKOH BENG HONG JULIANA                                             B50   BUKIT BATOK EAST AVENUE 5       0308                                 659801NCM19510410CHK
+S0187613EKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500706CCT
+S0188954FSIAHAAN GEOK LAN ROSEMARY                                         A14A  LORONG 7 TOA PAYOH              16227                                311014NCM19510207MHK
+S0188769DWEE CHONG JIN NEE CECILIA VERONICA HENDERSON                      B6A   CLUNY ROAD                                                           259574NCM19310825OEL
+S0191920CCHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                03553                                530676NCM19501130CCT
+S0190491EBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 3 103                                730022NCM19381002MMY
+S0187384ALOO LEONG HONG                                                    A3    UPPER ALJUNIED LANE             0968                                 360003NCF19370703CHK
+S0189090ATAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               0943                                 120320NCM19470526CHN
+S0189494CLIM AGNES                                                         B16   PARBURY AVENUE                                                       467291NCM19510806CTC
+S0189309AYEO HO WAH MARY                                                   B31   JALAN UJI                                                            678383NCM19501106CTC
+S0189216GTAY LEE KWEE                                                      C5253 HIDDENCREST CT CONCORD,CA 94521                                            NCM19500807CTC
+S0187668CANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             4 158                                560107NCM19400801CHK
+S0187106FYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490909CCT
+S0189630EWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370712CCT
+S0192007ECHER THIAM HEE                                                    A223A COMPASSVALE WALK                07633                                541223NCF19241123CTC
+S0187335BYEO HO WAH MARY                                                   B31   JALAN UJI                                                            678383NCM19501106CTC
+S0189804BONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0189848DANG GEK SIM YVONNE                                                B60   NEWTON ROAD                     3501                                 307994NCM19500811CHK
+S0189526GMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0187646CMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0189668GCHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             6 177                                510507NCM19490905CCT
+S0189342FLING CHWEE MOEY                                                   B218  CARPMAEL ROAD                                                        429946NCM19380814CHI
+S0187390GSEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451207CSH
+S0187930DNEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251203CHK
+S0187183EHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0189352BANG HIOK HOON                                                     A437  ANG MO KIO AVENUE 10            231369                               560437NCM19420417CTC
+S0189658ELOOI POH YEE                                                      A288F BUKIT BATOK STREET 25           1082                                 655288NCM19390531CCT
+S0190006GWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370711CCT
+S0190573CYEW AH LEW                                                        A174B EDGEDALE PLAINS                 10169                                822174NCM19470322CCT
+S0188415CHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0190731FCHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0188469GYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  3 58                                 520147NCM19490909CCT
+S0189063BCHAN CHEE SENG                                                    B36   WESTLAKE AVENUE                                                      574247NCF19321114CCT
+S0189891ELEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0187908DTAN LENA                                                          A71   MARINE DRIVE                    07234                                440071NCM19490419CTC
+S0188191DANG GILIAN                                                        A140  BUKIT BATOK STREET 11           0833                                 650140NCM19500916CHK
+S0189248DLING CHWEE MOEY                                                   B218  CARPMAEL ROAD                                                        429946NCM19380814CHI
+S0188447GLEE SIEW CHINN                                                    C8    BROOKLANDS LANE, WEYBRIDGE             KT13 8UX ENGLAND                    NCM19500426CTC
+S0188066FCHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                03553                                530676NCM19501130CCT
+S0187341AYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490908CCT
+S0187586FTAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               9 43                                 120320NCM19470527CHN
+S0187723BCHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0188731AGN SI-RENE                                                        B11   PEMIMPIN DRIVE                  7 1                                  576148NCM19501027CTC
+S0188785FHING CHYE GEOK JENNY                                              A27   TELOK BLANGAG WAY               3 1006                               90027 NCM19470725CFO
+S0189325CGOH SEOK TIEN GWENDOLINE                                          A236  SERANGOON AVENUE 3              0586                                 550236NCM19510421CTC
+S0189788ATAN LENA                                                          A71   MARINE DRIVE                    07234                                440071NCM19490419CTC
+S0188169DCHOY LAI CHUN                                                     A134  BISHAN STREET 12                08161                                570134NCM19501026CCT
+S0191810EKOW GLENDA                                                        A38   LORONG 5 TOA PAYOH              07497                                310038NCM19370523CHK
+S0187161DONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0187881ECHOO ALICE                                                        A254  ANG MO KIO AVENUE 4             12141                                560254NCM19500620CHK
+S0187701ALEE YUEK CHAI ROSE                                                A541  HOUGANG AVENUE 8                121211                               530541NCM19500117CFO
+S0187891ATAN POH NEO JANIE                                                 A716  JURONG WEST STREET 71           0267                                 640716NCM19500630CHK
+S0187445FGOH SEOK TIEN GWENDOLINE                                          A236  SERANGOON AVENUE 3              0586                                 550236NCM19510421CTC
+S0187167CNEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251203CHK
+S0189396CLEE YOKE KUEN PATRICIA                                            A329  CLEMENTI AVENUE 2               9 232                                120329NCM19500322CCT
+S0189919EHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0188453FLEE YUEK CHAI ROSE                                                A541  HOUGANG AVENUE 8                121211                               530541NCM19500117CFO
+S0187706FKOH KIM WAH                                                       A28   BENDEMEER ROAD                  7 687                                330028NCM19510108CFO
+S0188398GMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290619MMY
+S0190617DTAN POH NEO JANIE                                                 A716  JURONG WEST STREET 71           2 67                                 640716NCM19500701CHK
+S0189118ALIM AGNES                                                         B16   PARBURY AVENUE                                                       467291NCM19510805CTC
+S0187428CONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491019CHK
+S0191958EKOH BENG HONG JULIANA                                             B50   BUKIT BATOK EAST AVENUE 5       0308                                 659801NCM19510410CHK
+S0189799DONG SOH NEO                                                       A826  WOODLANDS STREET 81             0750                                 730826NCM19500619CHK
+S0190339AKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500705CCT
+S0187510AJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490715CHK
+S0188650EONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491020CHK
+S0188372BTOLEDO PATRICIA ANN                                               B1    PANDAN VALLEY                   05105                                597625NCM19510905OEL
+S0188911ECHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510426CTC
+S0190543ACHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0189926EJIMMY TOH KAI SENG                                                B76   BAYSHORE ROAD                   1618                                 469990NCF19350606CHK
+S0187675CCHIA CHYE KWEE MICHAEL                                            A230  TAMPINES STREET 24              6 122                                524230NCM19430124CHK
+S0188569BCHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0190466AMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0187620ETOLEDO PATRICIA ANN                                               B1    PANDAN VALLEY                   5 105                                597625NCM19510906OEL
+S0189801FViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCF19450906MCT
+S0190314EKWAN CHEE                                                         B12   CLIFTON VALE                                                         359684NCM19370130CCT
+S0192058GNOOR AISHAH BT MD SALIM                                           B15   JALAN BULOH PERINDU                                                  457673NCM19330520MMY
+S0191496BONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCM19290328CHK
+S0187136GTOLEDO PATRICIA ANN                                               B1    PANDAN VALLEY                   05105                                597625NCM19510905OEL
+S0187801BKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500706CCT
+S0188318EANG HIOK HOON                                                     A437  ANG MO KIO AVENUE 10            231369                               560437NCM19420417CTC
+S0189032FTEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490126CHK
+S0188286ACHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510723CPI
+S0190035ACHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0187648ENEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251204CHK
+S0191855ALIM SOO WENG                                                      A152B BISHAN STREET 11                11265                                572152NCM19491024CTC
+S0189801FViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCF19450906MCT
+S0189213DSEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480305CHK
+S0188575ALEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0190575EPANG KWONG MUN                                                    A296  YISHUN STREET 20                1013                                 760296NCM19300225CCT
+S0188831CTAN POH NEO JANIE                                                 A716  JURONG WEST STREET 71           0267                                 640716NCM19500630CHK
+S0189523DHUANG KEK CHEE                                                    B28   GREENBANK PARK                                                       589389NCM19341103CTC
+S0189316ATONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0190063ATAN SWEE LIAN VIOLET                                              A615  WOODLANDS AVENUE 4              09507                                730615NCM19510910CHK
+S0187092FSEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451207CSH
+S0188858ALEONG SAU WUN CECILIA                                             A98   LORONG 1 TOA PAYOH              09291                                310098NCM19500615CCT
+S0190908FTAY LEE KWEE                                                      C5253 HIDDENCREST CT CONCORD,CA 94521                                            NCM19500807CTC
+S0191960GLEONG SAU WUN CECILIA                                             A98   LORONG 1 TOA PAYOH              09291                                310098NCM19500615CCT
+S0189981CCHUA POH NEO, ANGELA                                              B94   CORONATION ROAD                                                      269490NCM19510627CHK
+S0187141ETONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0189038ECHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510723CPI
+S0188580FNOOR AISHAH BT MD SALIM                                           B15   JALAN BULOH PERINDU                                                  457673NCM19330521MMY
+S0189703GLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0187991BSEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480305CHK
+S0189474DCHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                90114 NCM19490108CCT
+S0189294GCHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0187397GLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0190914ETONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0188553GKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500706CCT
+S0191218FMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290619MMY
+S0188837BSEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480305CHK
+S0190553DViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCM19450907MCT
+S0190324AFOO SOON JONG PAULINE                                             B64C  OXLEY ROAD                                                           238649NCM19500429CHN
+S0188913GVALERIE CHIA KAH SIANG                                            A319  SERANGOON AVENUE 2              05346                                550319NCM19510221CTC
+S0190068ETONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0189452CLOO LEONG HONG                                                    A3    UPPER ALJUNIED LANE             9 68                                 360003NCM19370704CHK
+S0190940CLING CHWEE MOEY                                                   B218  CARPMAEL ROAD                                                        429946NCM19380814CHI
+S0189758FCHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                3 553                                530676NCM19501201CCT
+S0187403FCHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0191480GTAN LENA                                                          A71   MARINE DRIVE                    7 234                                440071NCM19490420CTC
+S0189016DLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501127CCT
+S0188918ECHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0191251DLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0191170GFOO SOON JONG PAULINE                                             B64C  OXLEY ROAD                                                           238649NCM19500429CHN
+S0191093ASEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480305CHK
+S0187403FCHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0192020DCHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0190634GTAN LENA                                                          A71   MARINE DRIVE                    7 234                                440071NCM19490420CTC
+S0190815ETAN SWEE LIAN VIOLET                                              A615  WOODLANDS AVENUE 4              09507                                730615NCM19510910CHK
+S0191354ACHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                90114 NCM19490108CCT
+S0189480CCHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             6 177                                510507NCM19490905CCT
+S0191813ATAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCF19430805CHK
+S0190892DCHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0188738ALEE YOKE KUEN PATRICIA                                            A329  CLEMENTI AVENUE 2               9 232                                120329NCM19500322CCT
+S0187719ELIM SOO WENG                                                      A152B BISHAN STREET 11                11265                                572152NCM19491025CTC
+S0187971CCHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510426CTC
+S0188259BLEE SIEW CHINN                                                    C8    BROOKLANDS LANE, WEYBRIDGE             KT13 8UX ENGLAND                    NCM19500425CTC
+S0191791ALIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251229CHK
+S0190046ECHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0191431GBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 3 103                                730022NCM19381002MMY
+S0187691EVALERIE CHIA KAH SIANG                                            A319  SERANGOON AVENUE 2              5 346                                550319NCM19510222CTC
+S0191894EHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCF19450726CKK
+S0191153DCHIA CHYE KWEE MICHAEL                                            A230  TAMPINES STREET 24              06122                                524230NCF19430123CHK
+S0190330GJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490714CHK
+S0187381FHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0187413BLEE SIEW CHINN                                                    C8    BROOKLANDS LANE, WEYBRIDGE             KT13 8UX ENGLAND                    NCM19500425CTC
+S0187381FHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0189741CPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420224CTC
+S0188488EONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCM19290328CHK
+S0191071GCHEW HWEE SIANG                                                   A268  BISHAN STREET 24                08170                                570268NCM19491218CTC
+S0187953FBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 03103                                730022NCM19381001MMY
+S0189774AKOH KIM WAH                                                       A28   BENDEMEER ROAD                  7 687                                330028NCM19510108CFO
+S0188308BLING CHWEE MOEY                                                   B218  CARPMAEL ROAD                                                        429946NCM19380814CHI
+S0189714DMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0190793DVALERIE CHIA KAH SIANG                                            A319  SERANGOON AVENUE 2              05346                                550319NCM19510221CTC
+S0191616BANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             4 158                                560107NCM19400801CHK
+S0188030FCHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380315CCT
+S0189539EYEW AH LEW                                                        A174B EDGEDALE PLAINS                 10169                                822174NCM19470322CCT
+S0187665GCHIA HANG KEE                                                     B2    PANDAN VALLEY                   9 207                                597626NCM19451223CTC
+S0189435GTANG SEE CHIM                                                     B23   VICTORIA PARK ROAD                                                   266502NCM19320605CCT
+S0190079BLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0187076DCHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                090015NCM19460719CCT
+S0187435CYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490908CCT
+S0190003DCHAN CHEE SENG                                                    B36   WESTLAKE AVENUE                                                      574247NCF19321114CCT
+S0187387DHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCF19381231CCT
+S0190951GPANG KWONG MUN                                                    A296  YISHUN STREET 20                1013                                 760296NCF19300224CCT
+S0187926GBARKER GLORIA HYACINTH                                            B6    SUNSET VALE                                                          597232NCM19290330OEL
+S0188951CLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0189596FTEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490127CHK
+S0188669CLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0188490GBARKER GLORIA HYACINTH                                            B6    SUNSET VALE                                                          597232NCM19290331OEL
+S0190822ETAN LENA                                                          A71   MARINE DRIVE                    07234                                440071NCM19490419CTC
+S0188004ACHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510723CPI
+S0187906BTONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0190239GLEE YUEK CHAI ROSE                                                A541  HOUGANG AVENUE 8                121211                               530541NCM19500116CFO
+S0188211CONG BEE HUA                                                       B1    FIR AVENUE                                                           279691NCM19400329CHK
+S0190566CPOH BE LECK                                                       X32   TANAH MERAH KECHIL ROAD         1217   EAST MEADOW                   465559NCM19370430CHK
+S0189318CTAN LENA                                                          A71   MARINE DRIVE                    07234                                440071NCM19490419CTC
+S0188391GViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCF19450906MCT
+S0190545CCHUA POH NEO, ANGELA                                              B94   CORONATION ROAD                                                      269490NCM19510628CHK
+S0190288GWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370711CCT
+S0191083ECHOY LAI CHUN                                                     A134  BISHAN STREET 12                08161                                570134NCM19501026CCT
+S0191623BCHIA CHYE KWEE MICHAEL                                            A230  TAMPINES STREET 24              6 122                                524230NCM19430124CHK
+S0190724FTEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490127CHK
+S0190545CCHUA POH NEO, ANGELA                                              B94   CORONATION ROAD                                                      269490NCM19510628CHK
+S0189493BKOH OI CHU CECILIA                                                A134  JALAN BUKIT MERAH               161428                               160134NCM19500706CCT
+S0189961DLIM LIAN HO DIANA                                                 B131  STEVENS ROAD                                                         257869NCM19511207CHK
+S0190010DANG HIOK HOON                                                     A437  ANG MO KIO AVENUE 10            231369                               560437NCM19420417CTC
+S0191901EBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 03103                                730022NCM19381001MMY
+S0188544EJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490715CHK
+S0187083DHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCF19450726CKK
+S0189416BCHOO MARY                                                         A171C EDGEDALE PLAINS                 6 440                                823171NCM19481005CHK
+S0188140CJIMMY TOH KAI SENG                                                B76   BAYSHORE ROAD                   1618                                 469990NCF19350606CHK
+S0188680GMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0192060BONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0187421CTAN POH NEO JANIE                                                 A716  JURONG WEST STREET 71           0267                                 640716NCM19500630CHK
+S0189858GCHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0190501AKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330321CTC
+S0190195FHING CHYE GEOK JENNY                                              A27   TELOK BLANGAG WAY               031006                               090027NCM19470724CFO
+S0190550ALEONG SAU WUN CECILIA                                             A98   LORONG 1 TOA PAYOH              9 291                                310098NCM19500616CCT
+S0189580DLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501128CCT
+S0190446CTAN LENA                                                          A71   MARINE DRIVE                    7 234                                440071NCM19490420CTC
+S0190424BJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490715CHK
+S0190730ECHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510724CPI
+S0189236FSIAHAAN GEOK LAN ROSEMARY                                         A14A  LORONG 7 TOA PAYOH              16227                                311014NCM19510207MHK
+S0190223ECHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0188266BLIM BEE ING HELENA                                                A35   JALAN BAHAGIA                   04232                                320035NCM19490204CFO
+S0189956FLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501127CCT
+S0188124ACHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380315CCT
+S0191270AJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490714CHK
+S0191809DPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420223CTC
+S0190168GCHOO MARY                                                         A171C EDGEDALE PLAINS                 06440                                823171NCM19481004CHK
+S0191913CCHER THIAM HEE                                                    A223A COMPASSVALE WALK                07633                                541223NCF19241123CTC
+S0191471EYEO HO WAH MARY                                                   B31   JALAN UJI                                                            678383NCM19501107CTC
+S0191193BYEO SIEW LEE SUSAN                                                A102  BISHAN STREET 12                19280                                570102NCM19511008CTC
+S0188479CGOH SEOK TIEN GWENDOLINE                                          A236  SERANGOON AVENUE 3              5 86                                 550236NCM19510422CTC
+S0191531BTAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCM19430806CHK
+S0189639GCHIA HANG KEE                                                     B2    PANDAN VALLEY                   9 207                                597626NCM19451223CTC
+S0190916GTAN LENA                                                          A71   MARINE DRIVE                    07234                                440071NCM19490419CTC
+S0189841DLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0191787DAVADAI DHANAM                                                     B37   BIN TONG PARK                                                        269818NCM19250117ITM
+S0191089DLIM LIAN HO DIANA                                                 B131  STEVENS ROAD                                                         257869NCM19511207CHK
+S0191253FKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330320CTC
+S0191454BCHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             6 177                                510507NCM19490905CCT
+S0191972ENEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251203CHK
+S0190146FLIM BEE ING HELENA                                                A35   JALAN BAHAGIA                   04232                                320035NCM19490204CFO
+S0191176FJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490714CHK
+S0187558FPOH BE LECK                                                       X32   TANAH MERAH KECHIL ROAD         1217   EAST MEADOW                   465559NCM19370430CHK
+S0188958CONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0190484EHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCM19450727CKK
+S0188805ETAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCM19430806CHK
+S0187176EWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370711CCT
+S0191225FCHAN CHEE SENG                                                    B36   WESTLAKE AVENUE                                                      574247NCF19321114CCT
+S0191793CHING CHYE GEOK JENNY                                              A27   TELOK BLANGAG WAY               031006                               090027NCM19470724CFO
+S0187481GHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCM19390101CCT
+S0187334AONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491019CHK
+S0192000EKHOO CHIN KOK ALLAN                                               A30   TELOK BLANGAG RISE              10324                                090030NCF19430904CHK
+S0191629AKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330321CTC
+S0191351ECHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                8 1996                               761677NCM19500915CTC
+S0190947CHING CHYE GEOK JENNY                                              A27   TELOK BLANGAG WAY               031006                               090027NCM19470724CFO
+S0189497FYEO HO WAH MARY                                                   B31   JALAN UJI                                                            678383NCM19501107CTC
+S0189716FNEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251204CHK
+S0191122BBARKER GLORIA HYACINTH                                            B6    SUNSET VALE                                                          597232NCM19290330OEL
+S0187693GCHOO ALICE                                                        A254  ANG MO KIO AVENUE 4             12141                                560254NCM19500621CHK
+S0187874EANG GEK SIM YVONNE                                                B60   NEWTON ROAD                     3501                                 307994NCM19500811CHK
+S0191896GLOO LEONG HONG                                                    A3    UPPER ALJUNIED LANE             0968                                 360003NCF19370703CHK
+S0187639CViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCM19450907MCT
+S0188244ATAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               0943                                 120320NCM19470526CHN
+S0187541CLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0190321ECHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510426CTC
+S0188282DTONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0188462GONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491020CHK
+S0191891BPANG KWONG MUN                                                    A296  YISHUN STREET 20                1013                                 760296NCF19300224CCT
+S0188783DLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251230CHK
+S0187361GHUANG KEK CHEE                                                    B28   GREENBANK PARK                                                       589389NCM19341102CTC
+S0188233DHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCF19381231CCT
+S0190838GONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0190860AHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCF19450726CKK
+S0189978GCHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510723CPI
+S0190582EANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             4 158                                560107NCM19400801CHK
+S0191612EHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCM19450727CKK
+S0187438FTAN LENA                                                          A71   MARINE DRIVE                    07234                                440071NCM19490419CTC
+S0187263GONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0188767BViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCM19450907MCT
+S0191334BANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             4 158                                560107NCM19400801CHK
+S0191100ATEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490126CHK
+S0188505AYEW AH LEW                                                        A174B EDGEDALE PLAINS                 10169                                822174NCM19470322CCT
+S0188953EONG SOH NEO                                                       A826  WOODLANDS STREET 81             0750                                 730826NCM19500619CHK
+S0188889DMAY CHIN SOON OI                                                  A8    CANTONMENT CLOSE                1787                                 081008NCM19370511CKK
+S0188579EViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCM19450907MCT
+S0188398GMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290619MMY
+S0189451BCHIA HANG KEE                                                     B2    PANDAN VALLEY                   9 207                                597626NCM19451223CTC
+S0190404CABDUL RAHIM BIN AHMAD                                             A682A WOODLANDS DRIVE 62              2 93                                 731682NCM19471008MMY
+S0191784ANEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251203CHK
+S0191603CLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251230CHK
+S0190889ACHOO ALICE                                                        A254  ANG MO KIO AVENUE 4             12141                                560254NCM19500620CHK
+S0189712BBARKER GLORIA HYACINTH                                            B6    SUNSET VALE                                                          597232NCM19290331OEL
+S0191473GTAN SWEE LIAN VIOLET                                              A615  WOODLANDS AVENUE 4              9 507                                730615NCM19510911CHK
+S0188372BTOLEDO PATRICIA ANN                                               B1    PANDAN VALLEY                   05105                                597625NCM19510905OEL
+S0187739DENG AH SIAM                                                       B75   FARRER DRIVE                    6 4                                  259281NCM19410228CTC
+S0187374FWONG KUM KOK                                                      B31   SIGLAP VIEW                                                          455795NCM19370711CCT
+S0189200ECHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0191325GYEW AH LEW                                                        A174B EDGEDALE PLAINS                 10169                                822174NCM19470322CCT
+S0191549ELEE SIEW CHINN                                                    C8    BROOKLANDS LANE, WEYBRIDGE             KT13 8UX ENGLAND                    NCM19500426CTC
+S0188300AONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0187193ASEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451207CSH
+S0192045AANG GILIAN                                                        A140  BUKIT BATOK STREET 11           0833                                 650140NCM19500916CHK
+S0191195DYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490908CCT
+S0191767ECHUA POH NEO, ANGELA                                              B94   CORONATION ROAD                                                      269490NCM19510627CHK
+S0188094FTONG MEI YEN EVELYN                                               D61   UPPER SERANGOON VIEW            0917                                 534015NCM19500830CHK
+S0187096CKHOO CHIN KOK ALLAN                                               A30   TELOK BLANGAG RISE              10324                                090030NCF19430904CHK
+S0188921ACHOY LAI CHUN                                                     A134  BISHAN STREET 12                08161                                570134NCM19501026CCT
+S0187461ATANG SEE CHIM                                                     B23   VICTORIA PARK ROAD                                                   266502NCF19320604CCT
+S0191816DTAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               0943                                 120320NCM19470526CHN
+S0188066FCHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                03553                                530676NCM19501130CCT
+S0188840ETAY LEE KWEE                                                      C5253 HIDDENCREST CT CONCORD,CA 94521                                            NCM19500807CTC
+S0188333ECHIA CHYE KWEE MICHAEL                                            A230  TAMPINES STREET 24              06122                                524230NCF19430123CHK
+S0189526GMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290620MMY
+S0191735ACHOO ALICE                                                        A254  ANG MO KIO AVENUE 4             12141                                560254NCM19500620CHK
+S0191047DHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0191255ACHER THIAM HEE                                                    A223A COMPASSVALE WALK                07633                                541223NCF19241123CTC
+S0190427ELEE YUEK CHAI ROSE                                                A541  HOUGANG AVENUE 8                121211                               530541NCM19500117CFO
+S0191489BLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0189183BLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0188763ELEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0190355CCHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0190023CPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420223CTC
+S0191053CHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCF19381231CCT
+S0191042FCHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                090015NCM19460719CCT
+S0191516AANG MARY                                                          A616  HOUGANG AVENUE 8                6 372                                530616NCM19460720CCT
+S0190279EONG BEE HUA                                                       B1    FIR AVENUE                                                           279691NCM19400329CHK
+S0188001ELIM SOO WENG                                                      A152B BISHAN STREET 11                11265                                572152NCM19491024CTC
+S0191587AViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCM19450907MCT
+S0187690DCHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                3 553                                530676NCM19501201CCT
+S0188252BCHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                090114NCM19490107CCT
+S0190148ALEE YOKE KUEN PATRICIA                                            A329  CLEMENTI AVENUE 2               09232                                120329NCM19500321CCT
+S0190775GPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420223CTC
+S0190585ABIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 3 103                                730022NCM19381002MMY
+S0190818ATEO CHEE CHING ANNIE                                              B12   THE INGLEWOOD                                                        575041NCM19490126CHK
+S0187560ACHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380316CCT
+S0191358EFOO SOON JONG PAULINE                                             B64C  OXLEY ROAD                                                           238649NCM19500430CHN
+S0187412ACHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             06177                                510507NCM19490904CCT
+S0189516DLEONG SAU WUN CECILIA                                             A98   LORONG 1 TOA PAYOH              9 291                                310098NCM19500616CCT
+S0190688ETAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               9 43                                 120320NCM19470527CHN
+S0191309EHUANG KEK CHEE                                                    B28   GREENBANK PARK                                                       589389NCM19341102CTC
+S0187281DCHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                090015NCM19460719CCT
+S0187102BKWAN CHEE                                                         B12   CLIFTON VALE                                                         359684NCM19370130CCT
+S0189745GTAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCM19430806CHK
+S0191315DTANG SEE CHIM                                                     B23   VICTORIA PARK ROAD                                                   266502NCM19320605CCT
+S0192056ESIAHAAN GEOK LAN ROSEMARY                                         A14A  LORONG 7 TOA PAYOH              16227                                311014NCM19510207MHK
+S0191778BONG PANG BOON                                                     B8    GROVE LANE                                                           279014NCF19290327CHK
+S0189238ANOOR AISHAH BT MD SALIM                                           B15   JALAN BULOH PERINDU                                                  457673NCM19330520MMY
+S0188617GTAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCM19430806CHK
+S0191080BCHOW KEET PECK MARGARET                                           A119  POTONG PASIR AVENUE 1           071016                               350119NCM19510107CCT
+S0190029BLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0189614CNOOR AISHAH BT MD SALIM                                           B15   JALAN BULOH PERINDU                                                  457673NCM19330521MMY
+S0188644FLEE YOKE KUEN PATRICIA                                            A329  CLEMENTI AVENUE 2               9 232                                120329NCM19500322CCT
+S0187952EJIMMY TOH KAI SENG                                                B76   BAYSHORE ROAD                   1618                                 469990NCF19350606CHK
+S0191260FCHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                090114NCM19490107CCT
+S0188415CHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0189156CPOH BE LECK                                                       X32   TANAH MERAH KECHIL ROAD         1217   EAST MEADOW                   465559NCF19370429CHK
+S0191037ACHAN CHEE SENG                                                    B36   WESTLAKE AVENUE                                                      574247NCF19321114CCT
+S0188295CONG SOH NEO                                                       A826  WOODLANDS STREET 81             0750                                 730826NCM19500619CHK
+S0188905FCHER THIAM HEE                                                    A223A COMPASSVALE WALK                07633                                541223NCF19241123CTC
+S0190851FLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251229CHK
+S0189183BLEE KWEE YEOW                                                     A3    LORONG LEW LIAN                 0868                                 531003NCF19410319CTC
+S0189467DKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330321CTC
+S0191489BLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0190568ECHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380316CCT
+S0189777DSEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480306CHK
+S0191211FViswanadh Devi Ch                                                 A2    110 Bedok                       2 278  110 Bedok Road                470112NCF19450906MCT
+S0187700GLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501128CCT
+S0189499ATAN SWEE LIAN VIOLET                                              A615  WOODLANDS AVENUE 4              9 507                                730615NCM19510911CHK
+S0188595FLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251230CHK
+S0189336GBARKER GLORIA HYACINTH                                            B6    SUNSET VALE                                                          597232NCM19290330OEL
+S0190421FLEE SIEW CHINN                                                    C8    BROOKLANDS LANE, WEYBRIDGE             KT13 8UX ENGLAND                    NCM19500426CTC
+S0189189ACHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0190039ECHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510426CTC
+S0189216GTAY LEE KWEE                                                      C5253 HIDDENCREST CT CONCORD,CA 94521                                            NCM19500807CTC
+S0188137GMAY CHIN SOON OI                                                  A8    CANTONMENT CLOSE                1787                                 081008NCM19370511CKK
+S0190290BCHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                090015NCM19460719CCT
+S0190933CHUANG KEK CHEE                                                    B28   GREENBANK PARK                                                       589389NCM19341102CTC
+S0189729EPANG KWONG MUN                                                    A296  YISHUN STREET 20                1013                                 760296NCM19300225CCT
+S0187859DBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 3 103                                730022NCM19381002MMY
+S0190960BJIMMY TOH KAI SENG                                                B76   BAYSHORE ROAD                   1618                                 469990NCF19350606CHK
+S0191522GANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             4 158                                560107NCM19400801CHK
+S0187625CLIM SOO WENG                                                      A152B BISHAN STREET 11                11265                                572152NCM19491025CTC
+S0188857ALEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0187937DLIM LIANG GEOK                                                    B116  WATTEN ESTATE ROAD                                                   287598NCM19251229CHK
+S0188631GVALERIE CHIA KAH SIANG                                            A319  SERANGOON AVENUE 2              5 346                                550319NCM19510222CTC
+S0188450CJANNIE, GOH SEE YEING                                             A406  SIN MING AVENUE                 13249                                570406NCM19490715CHK
+S0192014ECHOW PUI FOO THERESA                                              A676  HOUGANG AVENUE 8                03553                                530676NCM19501130CCT
+S0191425ACHIA HANG KEE                                                     B2    PANDAN VALLEY                   9 207                                597626NCM19451223CTC
+S0189322GCHOO MARY                                                         A171C EDGEDALE PLAINS                 06440                                823171NCM19481004CHK
+S0188760BFONG KWAI YOONG                                                   A294  TAMPINES STREET 22              8 600                                520294NCM19500618CCT
+S0190657BTANG SEE CHIM                                                     B23   VICTORIA PARK ROAD                                                   266502NCM19320605CCT
+S0191987FHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0188989FPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420223CTC
+S0189169BCHIA HANG KEE                                                     B2    PANDAN VALLEY                   09207                                597626NCF19451222CTC
+S0189654ATAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               9 43                                 120320NCM19470527CHN
+S0188634CCHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             6 177                                510507NCM19490905CCT
+S0191170GFOO SOON JONG PAULINE                                             B64C  OXLEY ROAD                                                           238649NCM19500429CHN
+S0190967BTAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCF19430805CHK
+S0187942BANG HIOK HOON                                                     A437  ANG MO KIO AVENUE 10            231369                               560437NCM19420417CTC
+S0188896DKOW GLENDA                                                        A38   LORONG 5 TOA PAYOH              07497                                310038NCM19370523CHK
+S0191737CLEE SIEW CHINN                                                    C8    BROOKLANDS LANE, WEYBRIDGE             KT13 8UX ENGLAND                    NCM19500425CTC
+S0190275AHUANG KEK CHEE                                                    B28   GREENBANK PARK                                                       589389NCM19341102CTC
+S0188891FHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCF19381231CCT
+S0189044DKOH BENG HONG JULIANA                                             B50   BUKIT BATOK EAST AVENUE 5       0308                                 659801NCM19510410CHK
+S0191709CMAY CHIN SOON OI                                                  A8    CANTONMENT CLOSE                1787                                 081008NCM19370511CKK
+S0189098BCHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                090114NCM19490107CCT
+S0191197FLIM SOO WENG                                                      A152B BISHAN STREET 11                11265                                572152NCM19491024CTC
+S0187839EAVADAI DHANAM                                                     B37   BIN TONG PARK                                                        269818NCM19250118ITM
+S0189354DANG MARY                                                          A616  HOUGANG AVENUE 8                06372                                530616NCM19460719CCT
+S0190504DLOOI POH YEE                                                      A288F BUKIT BATOK STREET 25           1082                                 655288NCM19390531CCT
+S0190815ETAN SWEE LIAN VIOLET                                              A615  WOODLANDS AVENUE 4              09507                                730615NCM19510910CHK
+S0189437BAVADAI DHANAM                                                     B37   BIN TONG PARK                                                        269818NCM19250118ITM
+S0191377CYEO HO WAH MARY                                                   B31   JALAN UJI                                                            678383NCM19501107CTC
+S0189158ECHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380315CCT
+S0191431GBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 3 103                                730022NCM19381002MMY
+S0190918BCHANG EE FONG                                                     A195A PUNGGOL ROAD                    16510                                821195NCM19510723CPI
+S0189125AYEO SIEW LEE SUSAN                                                A102  BISHAN STREET 12                19280                                570102NCM19511008CTC
+S0188227EHING MOONLIGHT                                                    B24A  BERRIMA ROAD                                                         299902NCM19321031CFO
+S0191098FTOLEDO PATRICIA ANN                                               B1    PANDAN VALLEY                   05105                                597625NCM19510905OEL
+S0189697ACHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0190869BPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420223CTC
+S0187277GCHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380315CCT
+S0187949BMAY CHIN SOON OI                                                  A8    CANTONMENT CLOSE                1787                                 081008NCM19370511CKK
+S0191409FTANG SEE CHIM                                                     B23   VICTORIA PARK ROAD                                                   266502NCM19320605CCT
+S0192030GKOH KIM WAH                                                       A28   BENDEMEER ROAD                  07687                                330028NCM19510107CFO
+S0192052AKOH BENG HONG JULIANA                                             B50   BUKIT BATOK EAST AVENUE 5       0308                                 659801NCM19510410CHK
+S0188433GKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330321CTC
+S0191752DONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491019CHK
+S0187435CYEE WHYE PENG JENNY                                               A147  SIMEI STREET 2                  0358                                 520147NCM19490908CCT
+S0188433GKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330321CTC
+S0187671FBIDAH BTE ABDULLAH, MRS BIDAH MOHAMMAD KASSIM                     A22   MARSILING DRIVE                 3 103                                730022NCM19381002MMY
+S0189741CPATRICIA TAN CHEH HOON                                            B31   JALAN KELULUT                                                        809048NCM19420224CTC
+S0189131FANG GILIAN                                                        A140  BUKIT BATOK STREET 11           0833                                 650140NCM19500916CHK
+S0190766EHO KOK WEE                                                        A22   GHIM MOH LINK                   22206                                271022NCF19450726CKK
+S0191022GSIAHAAN GEOK LAN ROSEMARY                                         A14A  LORONG 7 TOA PAYOH              16227                                311014NCM19510207MHK
+S0187594GCHAN POEY CHENG                                                   A114  BUKIT PURMEI ROAD               13255                                90114 NCM19490108CCT
+S0191131DCHAN CHEE SENG                                                    B36   WESTLAKE AVENUE                                                      574247NCF19321114CCT
+S0189431CENG AH SIAM                                                       B75   FARRER DRIVE                    6 4                                  259281NCM19410228CTC
+S0187076DCHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                090015NCM19460719CCT
+S0189768BLEE OOI LIAN PAULINE                                              A61B  STRATHMORE AVENUE               1318                                 143061NCM19501128CCT
+S0190853AHING CHYE GEOK JENNY                                              A27   TELOK BLANGAG WAY               031006                               090027NCM19470724CFO
+S0190003DCHAN CHEE SENG                                                    B36   WESTLAKE AVENUE                                                      574247NCF19321114CCT
+S0189332CNOOR AISHAH BT MD SALIM                                           B15   JALAN BULOH PERINDU                                                  457673NCM19330520MMY
+S0187697DGN SI-RENE                                                        B11   PEMIMPIN DRIVE                  7 1                                  576148NCM19501027CTC
+S0189928GSEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451207CSH
+S0188210BMAWAN BINTE WAJID KHAN                                            B15   GREENLEAF PLACE                                                      279419NCM19290619MMY
+S0187877ACHIA PHAIK HUA AGNES                                              A261  BISHAN STREET 22                10251                                570261NCM19510426CTC
+S0190031DKOH SIANG NOI                                                     B35   JALAN PACHELI                                                        557374NCM19330320CTC
+S0191442DKWAN CHEE                                                         B12   CLIFTON VALE                                                         359684NCM19370131CCT
+S0189726BCHOO KWAI HONG                                                    A15   TELOK BLANGAG CRESCENT          11236                                90015 NCM19460720CCT
+S0189153GTANG SEE CHIM                                                     B23   VICTORIA PARK ROAD                                                   266502NCF19320604CCT
+S0190488BANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             4 158                                560107NCM19400801CHK
+S0191475BYEO SIEW LEE SUSAN                                                A102  BISHAN STREET 12                19280                                570102NCM19511009CTC
+S0191393EGOH SEOK TIEN GWENDOLINE                                          A236  SERANGOON AVENUE 3              5 86                                 550236NCM19510422CTC
+S0187338ETOLEDO PATRICIA ANN                                               B1    PANDAN VALLEY                   05105                                597625NCM19510905OEL
+S0191823DCHEW HWEE SIANG                                                   A268  BISHAN STREET 24                08170                                570268NCM19491218CTC
+S0191240GANG AH TECK                                                       A107  ANG MO KIO AVENUE 4             04158                                560107NCF19400731CHK
+S0191486FFONG KWAI YOONG                                                   A294  TAMPINES STREET 22              8 600                                520294NCM19500618CCT
+S0190210FSEAH SUET NGOH                                                    A476B CHOA CHU KANG AVENUE 5          1625                                 682476NCM19451207CSH
+S0188340EKWAN CHEE                                                         B12   CLIFTON VALE                                                         359684NCM19370130CCT
+S0188091CYEO SIEW LEE SUSAN                                                A102  BISHAN STREET 12                19280                                570102NCM19511008CTC
+S0190673DCHIA HANG KEE                                                     B2    PANDAN VALLEY                   9 207                                597626NCM19451223CTC
+S0189370FABDUL RAHIM BIN AHMAD                                             A682A WOODLANDS DRIVE 62              0293                                 731682NCF19471007MMY
+S0190265EGOH SEOK TIEN GWENDOLINE                                          A236  SERANGOON AVENUE 3              0586                                 550236NCM19510421CTC
+S0188728ECHIANG VIRGINIA JANE                                              A507  PASIR RIS STREET 52             6 177                                510507NCM19490905CCT
+S0187823CLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500514CHK
+S0189415ACHEONG SIOK HONG NEO ELIZABETH                                    A62   MARINE DRIVE                    11102                                440062NCM19510909CHK
+S0187959ETAN TECK JOO                                                      A18   JOO SENG ROAD                   11163                                360018NCF19430805CHK
+S0189910CCHAN CHING OI                                                     B36   WESTLAKE AVENUE                                                      574247NCM19380315CCT
+S0189932CKHOO CHIN KOK ALLAN                                               A30   TELOK BLANGAG RISE              10324                                090030NCF19430904CHK
+S0190395AHUI BAN YIN                                                       B16   HIGHGATE CRESCENT                                                    598797NCM19390101CCT
+S0191622AKOW GLENDA                                                        A38   LORONG 5 TOA PAYOH              7 497                                310038NCM19370524CHK
+S0189654ATAN LEE KIM                                                       A320  CLEMENTI AVENUE 4               9 43                                 120320NCM19470527CHN
+S0191748GKOH KIM WAH                                                       A28   BENDEMEER ROAD                  07687                                330028NCM19510107CFO
+S0188498APOH BE LECK                                                       X32   TANAH MERAH KECHIL ROAD         1217   EAST MEADOW                   465559NCM19370430CHK
+S0190750CNEOH LYE HENG                                                     B1    WALMER DRIVE                                                         555026NCM19251203CHK
+S0190831GLEE SIN ENG MAISIE                                                B21   COTSWOLD CLOSE                                                       359619NCM19500513CHK
+S0187321BGN SI-RENE                                                        B11   PEMIMPIN DRIVE                  0701                                 576148NCM19501026CTC
+S0188085DSEE WAN OOI                                                       B63   WILKINSON ROAD                                                       436719NCM19480305CHK
+S0190935EENG AH SIAM                                                       B75   FARRER DRIVE                    0604                                 259281NCM19410227CTC
+S0191470DONG KIM TEE                                                       B33   PUNGGOL FIELD                   1415                                 828817NCM19491020CHK
+S0192009GCHAN SEOW MENG JULIET                                             A677A YISHUN RING ROAD                081996                               761677NCM19500914CTC
+S0189600CTAN LENA                                                          A71   MARINE DRIVE                    7 234                                440071NCM19490420CTC

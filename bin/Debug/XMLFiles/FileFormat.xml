@@ -4,8 +4,8 @@
   <RecordSize>170</RecordSize>
   <PrimaryKeyColumnNumber>1</PrimaryKeyColumnNumber>
   <FlatFiles>
-    <FlatFilePath1>C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT</FlatFilePath1>
-    <FlatFilePath2>C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT</FlatFilePath2>
+    <FlatFilePath1>C:\Users\vishal.chilka\Desktop\New Senior 463K revised data\FileData.txt</FlatFilePath1>
+    <FlatFilePath2>C:\Users\vishal.chilka\Desktop\ZSB120OM1.OUT</FlatFilePath2>
   </FlatFiles>
   <Fields>
     <Field Name="NRICNumber" ColumnNumber="1">

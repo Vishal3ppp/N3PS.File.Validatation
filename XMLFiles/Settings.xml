@@ -9,7 +9,7 @@ Only one validation settings to be specified
     <NewRun>True</NewRun>
   </RunSettings>
   <ValidationSetting>
-    <Percentage>50</Percentage>
+    <Percentage>1</Percentage>
     <Time>30</Time>
   </ValidationSetting>
 </Settings>

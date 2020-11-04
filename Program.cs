@@ -7,7 +7,8 @@ using NLog;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SQLite;
+//using System.Data.SQLite;
+using SQLite;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Threading;
 
 namespace N3PS.File.Comapre
 {
@@ -203,7 +205,10 @@ namespace N3PS.File.Comapre
             }
 
             //SQLiteHelper sqlLite = new SQLiteHelper();
-            SQLiteConnection m_dbConnection = sqlManipulation.OpenDBConnection(DBName);
+            System.Data.SQLite.SQLiteConnection m_dbConnection = sqlManipulation.OpenDBConnection1(DBName);
+
+
+            
 
 
 
@@ -214,16 +219,17 @@ namespace N3PS.File.Comapre
             string tableNameDeleted1 = "ICADeletedTable1";
             string tableNameInserted2 = "ICAInsertedTable2";
 
+            
             string CreateDeletedTableSQLQuery1 = flatFile.GetFlatFileDeletedTableScript(tableNameDeleted1, fetchedFlatFileObj);
             string CreateInsertedTableSQLQuery2 = flatFile.GetFlatFileInsertTableScript(tableNameInserted2, fetchedFlatFileObj);
 
 
             string processedtableName1 = "ProcessedICATable1";
             string processedtableName2 = "ProcessedICATable2";
-
+            FileHelper helper = new FileHelper();
             if (fetchedSettingsObj.NewRun)
             {
-                
+
                 string CreateTableSQLQuery1 = flatFile.GetFlatFileTableScript(tableName1, fetchedFlatFileObj);
                 string CreateTableSQLQuery2 = flatFile.GetFlatFileTableScript(tableName2, fetchedFlatFileObj);
 
@@ -231,88 +237,141 @@ namespace N3PS.File.Comapre
                 string CreateProcessedTableSQLQuery1 = flatFile.CreateFlatFileTableScript(processedtableName1);
                 string CreateProcessedTableSQLQuery2 = flatFile.CreateFlatFileTableScript(processedtableName2);
 
-                DataSet ds = sqlManipulation.CheckTableExists(m_dbConnection, tableName1, logger);
+                bool isExist = sqlManipulation.CheckTableExists(m_dbConnection, tableName1, logger);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                if (isExist)
                 {
-                    sqlManipulation.DeleteTable(DBName, tableName1, logger);
-                   
+                    sqlManipulation.DeleteTable(m_dbConnection,DBName, tableName1, logger);
+
                 }
 
-                sqlManipulation.CreateTable(DBName, CreateTableSQLQuery1, logger);
+                sqlManipulation.CreateTable(m_dbConnection, DBName, CreateTableSQLQuery1, logger);
 
-                ds = sqlManipulation.CheckTableExists(m_dbConnection, tableName2, logger);
+                isExist = sqlManipulation.CheckTableExists(m_dbConnection, tableName2, logger);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                if (isExist)
                 {
-                    sqlManipulation.DeleteTable(DBName, tableName2, logger);
-                    
+                    sqlManipulation.DeleteTable(m_dbConnection, DBName, tableName2, logger);
+
                 }
-                sqlManipulation.CreateTable(DBName, CreateTableSQLQuery2, logger);
+                sqlManipulation.CreateTable(m_dbConnection, DBName, CreateTableSQLQuery2, logger);
                 //sqlManipulation.DeleteTable(DBName, processedtableName1, logger);
                 //sqlManipulation.DeleteTable(DBName, processedtableName2, logger);
 
                 //sqlManipulation.CreateTable(DBName, CreateTableSQLQuery1, logger);
                 //sqlManipulation.CreateTable(DBName, CreateTableSQLQuery2, logger);
-                ds = sqlManipulation.CheckTableExists(m_dbConnection, processedtableName1, logger);
+                isExist = sqlManipulation.CheckTableExists(m_dbConnection, processedtableName1, logger);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                if (isExist)
                 {
-                    sqlManipulation.DeleteTable(DBName, processedtableName1, logger);
-                    
+                    sqlManipulation.DeleteTable(m_dbConnection, DBName, processedtableName1, logger);
+
                 }
-                sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery1, logger);
+                sqlManipulation.CreateTable(m_dbConnection, DBName, CreateProcessedTableSQLQuery1, logger);
 
-                ds = sqlManipulation.CheckTableExists(m_dbConnection, processedtableName2, logger);
+                isExist = sqlManipulation.CheckTableExists(m_dbConnection, processedtableName2, logger);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                if (isExist)
                 {
-                    sqlManipulation.DeleteTable(DBName, processedtableName2, logger);
-               
-                }
-
-                sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery2, logger);
-
-
-
-                ds = sqlManipulation.CheckTableExists(m_dbConnection, tableNameDeleted1, logger);
-
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    sqlManipulation.DeleteTable(DBName, tableNameDeleted1, logger);
+                    sqlManipulation.DeleteTable(m_dbConnection, DBName, processedtableName2, logger);
 
                 }
 
-                sqlManipulation.CreateTable(DBName, CreateDeletedTableSQLQuery1, logger);
+                sqlManipulation.CreateTable(m_dbConnection, DBName, CreateProcessedTableSQLQuery2, logger);
 
 
-                ds = sqlManipulation.CheckTableExists(m_dbConnection, tableNameInserted2, logger);
 
-                if (ds.Tables[0].Rows.Count > 0)
+                isExist = sqlManipulation.CheckTableExists(m_dbConnection, tableNameDeleted1, logger);
+
+                if (isExist)
                 {
-                    sqlManipulation.DeleteTable(DBName, tableNameInserted2, logger);
+                    sqlManipulation.DeleteTable(m_dbConnection, DBName, tableNameDeleted1, logger);
 
                 }
 
-                sqlManipulation.CreateTable(DBName, CreateInsertedTableSQLQuery2, logger);
+                sqlManipulation.CreateTable(m_dbConnection, DBName, CreateDeletedTableSQLQuery1, logger);
+
+
+                isExist = sqlManipulation.CheckTableExists(m_dbConnection, tableNameInserted2, logger);
+
+                if (isExist)
+                {
+                    sqlManipulation.DeleteTable(m_dbConnection, DBName, tableNameInserted2, logger);
+
+                }
+
+                sqlManipulation.CreateTable(m_dbConnection, DBName, CreateInsertedTableSQLQuery2, logger);
 
                 //sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery1, logger);
                 //sqlManipulation.CreateTable(DBName, CreateProcessedTableSQLQuery2, logger);
                 //sqlManipulation.CloseDBConnection(m_dbConnection);
 
+
+
+                //var conn = new SQLiteConnection( "foofoo");
+               
+
+                List<DynamicClass1> objList = new List<DynamicClass1>();
+                //SQLiteConnection m_dbConnection1 = sqlManipulation.OpenDBConnection(DBName);
+                // m_dbConnection1.CreateTable<DynamicClass1>();
+                helper.InsertInto(sqlManipulation, fetchedFlatFileObj, fetchedSettingsObj, m_dbConnection, DBName, tableName1, processedtableName1, fetchedFlatFileObj.FlatFilePath1, logger, objList, true);
+
+
+                List<DynamicClass2> objList1 = new List<DynamicClass2>();
+                helper.InsertInto(sqlManipulation, fetchedFlatFileObj, fetchedSettingsObj, m_dbConnection, DBName, tableName2, processedtableName2, fetchedFlatFileObj.FlatFilePath2, logger, objList1, false);
+
             }
-            FileHelper helper = new FileHelper();
-            helper.InsertInto(sqlManipulation, fetchedFlatFileObj, fetchedSettingsObj, m_dbConnection, DBName, tableName1, processedtableName1, fetchedFlatFileObj.FlatFilePath1, logger);
+            int table1Records = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection, tableName1, logger);
+            
 
-            helper.InsertInto(sqlManipulation, fetchedFlatFileObj, fetchedSettingsObj, m_dbConnection, DBName, tableName2, processedtableName2, fetchedFlatFileObj.FlatFilePath2, logger);
+            //set
+           
+
+            logger.Info("Comaprison is started.");
+            int table2Records = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection, tableName2, logger);
+            //List< ProcessedDetails1> list1 = m_dbConnection.Query<ProcessedDetails1>($"SELECT IsError, Count(1) AS TotalRecords FROM {processedtableName1} GROUP BY IsError");
+
+            m_dbConnection.Close();
+            Thread.Sleep(1000);
+            m_dbConnection = null;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            
+            System.Data.SQLite.SQLiteConnection m_dbConnection1 = sqlManipulation.OpenDBConnection1(DBName);
+            //m_dbConnection1.Open();
+            var list1 = sqlManipulation.GetTotalRecordsInTable(m_dbConnection1,$"SELECT IsError, Count(1) AS TotalRecords FROM {processedtableName1} GROUP BY IsError",logger);
+            //m_dbConnection1.Open();
+            helper.Compare(fetchedFlatFileObj, fetchedSettingsObj,  sqlManipulation, m_dbConnection1, DBName, tableName1, tableName2, processedtableName1, processedtableName2, tableNameDeleted1, tableNameInserted2, table1Records, list1, logger);
 
 
-            int table1Records = sqlManipulation.GetTotalRecordsInTable(m_dbConnection, tableName1, logger);
+            
+
+            int tab1 = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection1, tableName1, logger);
+
+            int tab2 = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection1, tableName2, logger);
+
+            int insTab = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection1, tableNameInserted2, logger);
+
+            int delTab = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection1, tableNameDeleted1, logger);
+
+            int fetchedTab1 = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection1, processedtableName1, logger);
+
+            int fetchedTab2 = sqlManipulation.GetTotalRecordsInTable1(m_dbConnection1, processedtableName2, logger);
+            logger.Info("-----------------------Report--------------------------------");
+            logger.Info($"{tableName1} : {tab1}");
+            logger.Info($"{tableName2} : {tab2}");
+            logger.Info($"{tableNameInserted2} : {insTab}");
+            logger.Info($"{tableNameDeleted1} : {delTab}");
+            logger.Info($"{processedtableName1} : {fetchedTab1}");
+            logger.Info($"{processedtableName2} : {fetchedTab2}");
+            logger.Info("-------------------------------------------------------");
 
 
-            int table2Records = sqlManipulation.GetTotalRecordsInTable(m_dbConnection, tableName2, logger);
-            DataSet dsTotalRecords1 = sqlManipulation.GetTotalRecords(m_dbConnection, processedtableName1, logger);
-            helper.Compare(fetchedFlatFileObj, fetchedSettingsObj,  sqlManipulation, m_dbConnection, DBName, tableName1, tableName2, processedtableName1, processedtableName2, tableNameDeleted1, tableNameInserted2, table1Records, dsTotalRecords1, logger);
+
+            helper.WriteToFile(sqlManipulation, fetchedFlatFileObj, m_dbConnection1, DBName, tableNameInserted2, logger, insTab);
+            helper.WriteToFile(sqlManipulation, fetchedFlatFileObj, m_dbConnection1, DBName, tableNameDeleted1, logger, delTab);
+            sqlManipulation.CloseDBConnection(m_dbConnection1);
+
             /*DataSet dsTotalRecords = sqlManipulation.GetTotalRecords(m_dbConnection, tableName, logger);
             FileHelper helper = new FileHelper();
             ProcessedDetails processedDetails = helper.ValidateFile(fetchedFlatFileObj, fetchedSettingsObj, fetchedValidationRuleObj, sqlManipulation, m_dbConnection, DBName, tableName, assemblyDetails, dsTotalRecords, logger);
@@ -360,7 +419,7 @@ namespace N3PS.File.Comapre
             //f.ValidateFile(@"C:\Users\vishal.chilka\Desktop\ZSB120OM.OUT");
 
             return 0;*/
-            sqlManipulation.CloseDBConnection(m_dbConnection);
+            // sqlManipulation.CloseDBConnection(m_dbConnection);
             return 0;
         }
     }

@@ -1,5 +1,6 @@
 ﻿using N3PS.File.Compare.BusinessLogic;
 using NLog;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -255,8 +256,8 @@ namespace N3PS.File.Compare.XMLConfigClasses
                 tableCreateScript.AppendLine($"{field.FieldName} VARCHAR({field.Length}),");
 
             }
-            
-            tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
+            tableCreateScript.AppendLine($"HashingKey NVARCHAR(4000)");
+           // tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
             tableCreateScript.AppendLine(")");
 
             return tableCreateScript.ToString();
@@ -271,6 +272,8 @@ namespace N3PS.File.Compare.XMLConfigClasses
             tableCreateScript.AppendLine($"Create Table {tableName}");
             tableCreateScript.AppendLine("(");
 
+            //tableCreateScript.AppendLine("FlatFileRowNumber INT,");
+
             tableCreateScript.AppendLine("FlatFileRowNumber INT,");
             foreach (Fields field in fetchedFlatFileDetails.fields)
             {
@@ -279,12 +282,32 @@ namespace N3PS.File.Compare.XMLConfigClasses
                 tableCreateScript.AppendLine($"{field.FieldName} VARCHAR({field.Length}),");
 
             }
-
-            tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
+            tableCreateScript.AppendLine($"HashingKey NVARCHAR(4000)");
+            //tableCreateScript[tableCreateScript.ToString().Length - 3] = ' ';
             tableCreateScript.AppendLine(")");
 
             return tableCreateScript.ToString();
 
         }
+
+
+
+    }
+
+
+
+    [Table("ProcessedICATable1")]
+    public class ProcessedDetails1
+    {
+        public string FlatFileRowNumber { get; set; }
+        public string IsError { get; set; }
+       
+    }
+    [Table("ProcessedICATable2")]
+    public class ProcessedDetails2
+    {
+        public string PatientVitalID { get; set; }
+        public string Weight { get; set; }
+        
     }
 }
